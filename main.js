@@ -49,43 +49,27 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
-
-                   <div class="card">
-                        <div class="optional-header">
-                            <div class="thumbnail thumbnail--40x40">
-                                <img src="${anime.image_url}" alt="" width="40" height="40">
+                    <div class="component-wrapper card-component-wrapper" onclick="window.location.href='${anime.url}>
+                        <div class="mdc-card demo-card">
+                        <div class="mdc-card__primary-action" tabindex="0">
+                            <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: ${anime.image_url};);"></div>
+                            <div class="demo-card__primary">
+                                <h3 class="demo-card__subtitle mdc-typography mdc-typography--overline">${anime.type}</h3>
+                            <h2 class="demo-card__title mdc-typography mdc-typography--headline6">${anime.tittle}</h2>
                             </div>
-                            <div class="primary-title">
-                                <div class="title">
-                                    ${anime.type}
-                                </div>
-                                <div class="subhead">
-                                    ${anime.airing == true? 'En emisión':'Finalizada'}
-                                </div>
+                            <div class="demo-card__secondary mdc-typography mdc-typography--body2">${anime.synopsis}</div>
+                        </div>
+                        <div class="mdc-card__actions">
+                            <div class="mdc-card__action-buttons">
+                            <button class="mdc-button mdc-card__action mdc-card__action--button" onclick="window.location.href='${anime.url}>Ver más</button>
                             </div>
                         </div>
-                        <div class="media media--16-9"> 
-                            <img src="${anime.image_url}" alt="" width="640" height="426">
-                        </div>
-                        <div class="primary-title">
-                            <div class="primary-text">
-                                ${anime.tittle}
-                            </div>
-                            <div class="secondary-text">
-                                ${anime.episodes == null? 1:anime.episodes}
-                            </div>
-                        </div>
-                        <div class="supporting-text">
-                            ${anime.synopsis}
-                        </div>
-                        <div class="actions">
-                            <div class="action-buttons">
-                                <button class="button" type="button" onclick="window.location.href='${anime.url}'">
-                                    Ver más
-                                </button>
-                            </div>
                         </div>
                     </div>
+
+
+
+
                 `
 
             }).join("");
