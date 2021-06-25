@@ -58,14 +58,13 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     </div>
                     <div class="media media--16-9"> <img src="${anime.image_url}" alt="" width="640" height="426"> </div>
                     <div class="primary-title">
-                    <div class="primary-text">Primary text goes here</div>
-                    <div class="secondary-text">Secondary text</div>
+                    <div class="primary-text">${anime.tittle}</div>
+                    <div class="secondary-text">${anime.airing==true? 'En emisión':'Finalizado'}</div>
                     </div>
-                    <div class="supporting-text">Supporting text include text like an article summary or a restaurant description.</div>
+                    <div class="supporting-text">${anime.synopsis}</div>
                     <div class="actions">
                     <div class="action-buttons">
-                        <button class="button" type="button">Action 1</button>
-                        <button class="button" type="button">Action 2</button>
+                        <button class="button" type="button" onclick="window.location.href='${anime.url}'">CONOCER MÁS</button>
                     </div>
                     <div class="action-icons float-right"> <i class="material-icons action-icon" role="button" title="Share">share</i> <i class="material-icons action-icon" role="button" title="More options">more_vert</i> </div>
                     </div>
