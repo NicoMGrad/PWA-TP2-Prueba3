@@ -49,23 +49,27 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
-                    <div class="component-wrapper card-component-wrapper">
-                        <div class="mdc-card demo-card">
-                        <div class="mdc-card__primary-action" tabindex="0">
-                            <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: ${anime.image_url};);"></div>
-                            <div class="demo-card__primary">
-                                <h3 class="demo-card__subtitle mdc-typography mdc-typography--overline">${anime.type}</h3>
-                            <h2 class="demo-card__title mdc-typography mdc-typography--headline6">${anime.tittle}</h2>
-                            </div>
-                            <div class="demo-card__secondary mdc-typography mdc-typography--body2">${anime.synopsis}</div>
-                        </div>
-                        <div class="mdc-card__actions">
-                            <div class="mdc-card__action-buttons">
-                            <button class="mdc-button mdc-card__action mdc-card__action--button" onclick="window.location.href='${anime.url}>Ver más</button>
-                            </div>
-                        </div>
-                        </div>
+                    <div class="card">
+                    <div class="optional-header">
+                    <div class="primary-title">
+                        <div class="title">Title</div>
+                        <div class="subhead">Subhead</div>
                     </div>
+                    </div>
+                    <div class="media media--16-9"> <img src="${anime.image_url}" alt="" width="640" height="426"> </div>
+                    <div class="primary-title">
+                    <div class="primary-text">Primary text goes here</div>
+                    <div class="secondary-text">Secondary text</div>
+                    </div>
+                    <div class="supporting-text">Supporting text include text like an article summary or a restaurant description.</div>
+                    <div class="actions">
+                    <div class="action-buttons">
+                        <button class="button" type="button">Action 1</button>
+                        <button class="button" type="button">Action 2</button>
+                    </div>
+                    <div class="action-icons float-right"> <i class="material-icons action-icon" role="button" title="Share">share</i> <i class="material-icons action-icon" role="button" title="More options">more_vert</i> </div>
+                    </div>
+                </div>
 
 
 
