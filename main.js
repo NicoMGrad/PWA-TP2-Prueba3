@@ -12,7 +12,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     });
 
-    btnBuscar.addEventListener('submit', function(){
+    btnBuscar.addEventListener('click', function(){
         consulta(termino.value);
         console.log(termino.value);
     })
