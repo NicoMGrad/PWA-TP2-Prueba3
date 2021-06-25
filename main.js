@@ -49,7 +49,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
-                    <div class="component-wrapper card-component-wrapper" onclick="window.location.href='${anime.url}>
+                    <div class="component-wrapper card-component-wrapper">
                         <div class="mdc-card demo-card">
                         <div class="mdc-card__primary-action" tabindex="0">
                             <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: ${anime.image_url};);"></div>
