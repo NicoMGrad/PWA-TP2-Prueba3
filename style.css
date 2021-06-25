@@ -6,6 +6,8 @@
 
 body {
     font-family: 'Monstserrat','Helvetica', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 hr {
@@ -203,6 +205,13 @@ h6 {
 	content: "";
 	display: block;
 }
+
+#resultados {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .card__dark .action-icons {
 	color: rgba(255,255,255,1);
 }
@@ -365,6 +374,7 @@ h6 {
 .optional-header {
 	min-height: 40px;
 	padding: 16px;
+    margin: 1rem .4rem;
 	position: relative;
 }
 .optional-header .action-icons {
