@@ -2,6 +2,7 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+    transition: all ease-in-out 250ms;
 }
 
 body {
@@ -204,6 +205,10 @@ h6 {
 .card::after, .card::before {
 	content: "";
 	display: block;
+}
+
+.card:hover {
+    transform: translate(10px,10px);
 }
 
 #resultados {

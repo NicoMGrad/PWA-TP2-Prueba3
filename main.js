@@ -52,13 +52,17 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     <div class="card">
                     <div class="optional-header">
                     <div class="primary-title">
-                        <div class="title">Title</div>
-                        <div class="subhead">Subhead</div>
+                        <div class="title">${anime.type}</div>
+                        <div class="subhead">Score: ${anime.score==0?1:anime.score} 
+                            <span class="material-icons">
+                                star
+                            </span>
+                        </div>
                     </div>
                     </div>
                     <div class="media media--16-9"> <img src="${anime.image_url}" alt="" width="640" height="426"> </div>
                     <div class="primary-title">
-                    <div class="primary-text">${anime.tittle}</div>
+                    <div class="primary-text">${anime.title}</div>
                     <div class="secondary-text">${anime.airing==true? 'En emisión':'Finalizado'}</div>
                     </div>
                     <div class="supporting-text">${anime.synopsis}</div>
@@ -66,7 +70,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     <div class="action-buttons">
                         <button class="button" type="button" onclick="window.location.href='${anime.url}'">CONOCER MÁS</button>
                     </div>
-                    <div class="action-icons float-right"> <i class="material-icons action-icon" role="button" title="Share">share</i> <i class="material-icons action-icon" role="button" title="More options">more_vert</i> </div>
+                    
                     </div>
                 </div>
 
