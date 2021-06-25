@@ -33,19 +33,35 @@ textarea {
 	top: 11px;
 	word-wrap: break-word;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:600px) {
+    main {
+        flex-direction: row;
+    }
+}
+
 [class^='col-'] {
 	float: left;
 	padding: 0 0.5%;
 }
 h1 {
+    font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
 	font-size: 96px;
-	font-weight: 300;
+	font-weight: 800;
 	letter-spacing: -1.5px;
+    color:#E51F38;
 }
 h2 {
+    font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
 	font-size: 60px;
-	font-weight: 300;
+	font-weight: 500;
 	letter-spacing: -0.5px;
+    color:#E51F38;
 }
 h3 {
 	font-size: 48px;
@@ -67,6 +83,25 @@ h6 {
 	font-weight: 500;
 	letter-spacing: 0.15px;
 }
+
+.base {
+    font-family: 'Montserrat','Helvetica',sans-serif;
+    color: #0d083a;
+
+}
+
+.contenedor_busqueda {
+    background: white;
+    position: fixed;
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding:2vw;
+}
+
 .subtitle-01 {
 	font-size: 16px;
 	font-weight: 400;
