@@ -4,7 +4,12 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         termino = document.getElementById('busqueda'),
         btnBuscar = document.getElementById('buscar');
 
-    termino.addEventListener('keypress',function(){
+        btnBuscar.addEventListener('click', function(){
+            consulta(termino.value);
+            console.log(termino.value);
+        });
+    
+        termino.addEventListener('keypress',function(){
         if (event.key === "Enter") {
             event.preventDefault();
             consulta(termino.value);
@@ -12,11 +17,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     });
 
-    btnBuscar.addEventListener('click', function(){
-        consulta(termino.value);
-        console.log(termino.value);
-    })
-
+    
     function consulta(anime){
         const fetchPromise = fetch(`${base_URL}?q=${anime}&page=1`);
 
