@@ -124,10 +124,10 @@ window.onload = function() {
                 // Toma los videos del IDB y los muestra usando displayVideo()
                     console.log('tomando videos del IDB');
                     displayVideo(request.result.mp4, request.result.webm, request.result.name);
-                } /*else {
+                } else {
                 // Recuperar los videos de la red
                     fetchVideoFromNetwork(videos[i]);
-                }*/
+                }
             };
         }
     }
