@@ -149,7 +149,7 @@ h6 {
 }
 
 .subtitulo {
-    font-weight: 200!important;
+    font-weight: 400!important;
 }
 
 .subtitle-01 {
@@ -204,7 +204,14 @@ h6 {
 }
 
 .buttonCard {
-
+    background: #e51f38;
+    margin: 0;
+    padding: .3rem 0.1rem;
+    border-radius: 19px 0px 0px;
+    color: white;
+    font-family: 'Roboto Mono';
+    font-size: 2.3rem;
+    font-weight: 200;
 }
 
 .button, .action-icon {
@@ -266,9 +273,14 @@ h6 {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	min-height: 52px;
-	padding: 8px;
-	position: relative;
-	z-index: 1;
+	padding: 0;
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
 }
 .divider {
 	display: block;
@@ -299,9 +311,9 @@ h6 {
 
 .card:hover {
     transform: translate(-10px,-10px);
-    -moz-box-shadow: 0 3px 11px -2px rgba(0,0,0,.2), 0 2px 15px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-	-webkit-box-shadow: 0 3px 11px -2px rgba(0,0,0,.2), 0 15px 2px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-	box-shadow: 0 3px 11px -2px rgba(0,0,0,.2), 0 2px 15px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+    -moz-box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%)
+	-webkit-box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%)
+	box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%)
 }
 
 #resultados {
@@ -529,11 +541,24 @@ h6 {
 .subhead {
     font-size: .7rem;
     text-transform: uppercase;
-    letter-spacing: .8rem;
+    letter-spacing: .2rem;
+}
+
+.numero {
+    position: absolute;
+    top: 50%;
+    right: '2';
+    font-family: 'Roboto Mono', monospace;
+    color: #221689;
+    font-size: 2rem;
+    z-index: 4;
 }
 
 .secondary-text {
-    color: #221689;
+    color: white;
+    background: #221689;
+    line-height: 17px;
+    width: fit-content;
     font-family: 'Roboto Mono';
     font-size: .9rem;
     letter-spacing: .05rem;
@@ -545,6 +570,7 @@ h6 {
 	font-size: .7rem;
     line-height: 1.5;
     padding: 16px;
+    margin-bottom: 3rem;
     color: #221689;
 }
 .thumbnail {

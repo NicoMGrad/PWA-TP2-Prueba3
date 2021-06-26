@@ -61,7 +61,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                         </div>
                     </div>
                     </div>
-                    <div class="media media--16-9"> <img src="${anime.image_url}" alt="${anime.title}" width="640" height="426"> </div>
+                    <div class="media media--16-9">
+                        <p class="numero">${numero(data.results,anime.title)}</p>
+                        <img src="${anime.image_url}" alt="${anime.title}" width="640" height="426">
+                    </div>
                     <div class="primary-title">
                     <div class="primary-text">${cortarTitle(anime.title)}</div>
                     <div class="secondary-text">${anime.airing==true? 'En emisión':'Finalizado'}</div>
@@ -69,7 +72,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     <div class="supporting-text">${anime.synopsis}</div>
                     <div class="actions">
                         <div class="action-buttons">
-                            <button class="button buttonCard" type="button" onclick="window.location.href='${anime.url}'">CONOCER MÁS</button>
+                            <button class="button buttonCard" type="button" onclick="window.location.href='${anime.url}'">+</button>
                         </div>
                     </div>
                 </div>
@@ -96,6 +99,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             nuevoTitle = titulo;
         }
         return nuevoTitle
+    }
+
+    function numero(objeto,termino) {
+        let findNum = objeto.findIndex(termino);
+        return findNum
     }
     
 });
