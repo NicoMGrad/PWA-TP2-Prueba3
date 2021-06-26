@@ -114,6 +114,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
 window.onload = function() {
     const videos = [{'nombre':'historia_anime'}];
+    let db;
 
     function init() {
         for(let i = 0; i < videos.length; i++) {
