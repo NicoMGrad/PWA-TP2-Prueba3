@@ -9,6 +9,10 @@ body {
     font-family: 'Monstserrat','Helvetica', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background:url('./img/fondo.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 hr {
@@ -133,6 +137,7 @@ h6 {
     font-weight: 500;
     color: #221689;
     margin: .5rem .5rem 3rem;
+    background:white
 
 }
 
@@ -145,7 +150,7 @@ h6 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding:2vw;
+    padding:4vw;
 }
 
 .subtitulo {
@@ -723,4 +728,8 @@ h6 {
   .input-data input:focus ~ .underline:before,
   .input-data input:valid ~ .underline:before{
     transform: scaleX(1);
+  }
+
+  input:-internal-autofill-selected {
+      background-color: white!important;
   }
