@@ -49,19 +49,24 @@ header {
     z-index: 3;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    padding: 2.5rem;
 }
 
-header nav {
+header nav ul {
     display: flex;
+    list-style-type: none;
 }
 
-nav li {
+nav ul li {
     font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
-    font-size: 1rem;
-	font-weight: 600;
-	letter-spacing: .5px;
-    color:#001c41;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 4.5px;
+    color: #001c41;
     margin: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 nav li:hover {
@@ -70,6 +75,7 @@ nav li:hover {
 
 .logo {
     height: 2rem;
+    width: auto;
 }
 
 @media screen and (min-width:600px) {
