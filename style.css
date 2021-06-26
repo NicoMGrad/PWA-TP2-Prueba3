@@ -755,13 +755,13 @@ h6 {
   }
 
   .miRipple:hover {
-    background-size: 15000%;
-    background-color: rgb(18, 187, 170);
-    background-image: radial-gradient(circle,transparent 1%, rgb(18, 187, 170) 1%);
+    background-color: #221689;
+    background-image: radial-gradient(circle,transparent 1%, #221689 1%);
     background-position: center;
+    background-size: 1500%;
   }
 
-  .miRipplez:active {
+  .miRipple:active {
       transition: background 0s;
       background-color: #6200EE;
       background-size: 100%;
