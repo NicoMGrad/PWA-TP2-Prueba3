@@ -55,8 +55,8 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     <div class="primary-title">
                         <div class="title">${anime.type}</div>
                         <div class="subhead">
-                        Score: <b>${anime.score==0?1:anime.score} </b>
-                        | Episodios: <b>${anime.episodes==0?1:anime.episodes}</b>
+                        Score:<b>${anime.score==0?1:anime.score}</b>
+                        | Episodios:<b>${anime.episodes==0?1:anime.episodes}</b>
                         </div>
                     </div>
                     </div>
