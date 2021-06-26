@@ -757,7 +757,7 @@ h6 {
   .miRipple:hover {
     background-size: 15000%;
     background-color: rgb(18, 187, 170);
-    background-image: radial-gradient(circle,transparent 1%, rgb(18, 187, 170));
+    background-image: radial-gradient(circle,transparent 1%, rgb(18, 187, 170) 1%);
     background-position: center;
   }
 
