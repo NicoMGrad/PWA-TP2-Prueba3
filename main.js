@@ -132,7 +132,7 @@ window.onload = function() {
             };
         }
     }
-    function fetchVideoFromNetwork(video) {
+    function fetchVideoFromNetwork(videos) {
         console.log('fetching videos from network');
         let mp4Blob = fetch('videos/' + videos.nombre + '.mp4').then(response =>
             response.blob()
