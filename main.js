@@ -126,11 +126,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     }
 
-    let mp4Blob = fetch('videos/' + video.nombre + '.mp4').then(response =>
+    let mp4Blob = fetch('videos/' + videos.nombre + '.mp4').then(response =>
         response.blob()
       );
 
-    let webmBlob = fetch('videos/' + video.nombre + '.webm').then(response =>
+    let webmBlob = fetch('videos/' + videos.nombre + '.webm').then(response =>
     response.blob()
     );
       
