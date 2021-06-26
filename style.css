@@ -224,17 +224,13 @@ h6 {
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1);
 }
 .button--raised {
-	-moz-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-	-webkit-box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-	box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+	
 	-o-transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1);
 	-webkit-transition: 0 .28s cubic-bezier(.4, 0, .2, 1);
 	transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1), 0 .28s cubic-bezier(.4, 0, .2, 1);
 }
 .button--raised:focus, .button--raised:hover {
-	-moz-box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-	-webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
-	box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+
 }
 .button--purple {
 	background-color: #6200EE;
@@ -698,14 +694,14 @@ h6 {
     font-weight: 100;
     border-bottom: 2px solid #221689;
     outline: none;
-    background: white;
+    background-color: white;
   }
   .input-data input:focus ~ label,
   .input-data input:valid ~ label{
     transform: translateY(-58px);
-    font-size: 15px;
+    font-size: 0.9rem;
     color: #E51F38;
-    background: #ffffff;
+    background-color: #ffffff;
   }
   .wrapper .input-data label{
     position: absolute;
@@ -748,13 +744,15 @@ h6 {
     font-family: 'Roboto Mono';
     letter-spacing: 2px;
     border: none;
-    padding: 12px 18px;
-    font-size: 16px;
+    padding: 1rem 1.3rem 1rem 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
     text-transform: uppercase;
     cursor: pointer;
     background-color: #e51f38;
     outline: none;
     color: white;
+    margin-top: 2rem;
   }
   .btnMiRipple span {
       margin-right: .2rem;
