@@ -62,7 +62,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     </div>
                     </div>
                     <div class="media media--16-9">
-                        <p class="numero">${numero(data.results,anime.title)}</p>
+                        <p class="numero">${findWithAttr(data.results,'title',anime.title)}</p>
                         <img src="${anime.image_url}" alt="${anime.title}" width="640" height="426">
                     </div>
                     <div class="primary-title">
@@ -108,6 +108,15 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         console.log(titulito);
         let findNum = objetito.indexOf(titulito);
         return findNum
+    }
+
+    function findWithAttr(array, attr, value) {
+        for(var i = 0; i < array.length; i += 1) {
+            if(array[i][attr] === value) {
+                return i;
+            }
+        }
+        return -1;
     }
     
 });
