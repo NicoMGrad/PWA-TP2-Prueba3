@@ -148,7 +148,9 @@ h6 {
     padding:2vw;
 }
 
-
+.subtitulo {
+    font-weight: 200!important;
+}
 
 .subtitle-01 {
 	font-size: 16px;
@@ -200,6 +202,11 @@ h6 {
 	text-align: center;
 	text-transform: uppercase;
 }
+
+.buttonCard {
+
+}
+
 .button, .action-icon {
 	-webkit-transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1);
 	transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1), background-color .4s cubic-bezier(.25, .8, .25, 1);
@@ -515,15 +522,30 @@ h6 {
 	padding: 0;
 }
 .subhead, .secondary-text {
-	color: rgba(0,0,0,.54);
-	font-size: 14px;
+	color: #221689;
+    font-family: 'Roboto Mono';
 }
+
+.subhead {
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+}
+
+.secondary-text {
+    color: #221689;
+    font-family: 'Roboto Mono';
+    font-size: .9rem;
+    letter-spacing: .05rem;
+    font-weight: 700;
+}
+
 .supporting-text {
     font-family: 'Roboto Mono', monospace;
-	font-size: 14px;
-	line-height: 1.5;
-	padding: 16px;
-    color: #001c41;
+	font-size: .7rem;
+    line-height: 1.5;
+    padding: 16px;
+    color: #221689;
 }
 .thumbnail {
 	-moz-border-radius: 50%;
@@ -580,8 +602,11 @@ h6 {
 	width: 40px;
 }
 .title {
-	font-size: 14px;
-	font-weight: 500;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Roboto Mono';
+    line-height: 0!important;
+    margin-top: .5rem;
 }
 .title + .subhead {
 	margin-top: calc(14px/2/2); /* margin-top is 50% of the title font size. */

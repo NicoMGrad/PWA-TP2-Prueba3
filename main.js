@@ -63,21 +63,16 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     </div>
                     <div class="media media--16-9"> <img src="${anime.image_url}" alt="${anime.title}" width="640" height="426"> </div>
                     <div class="primary-title">
-                    <div class="primary-text">${anime.title}</div>
+                    <div class="primary-text">${cortarTitle(anime.title)}</div>
                     <div class="secondary-text">${anime.airing==true? 'En emisión':'Finalizado'}</div>
                     </div>
                     <div class="supporting-text">${anime.synopsis}</div>
                     <div class="actions">
-                    <div class="action-buttons">
-                        <button class="button" type="button" onclick="window.location.href='${anime.url}'">CONOCER MÁS</button>
-                    </div>
-                    
+                        <div class="action-buttons">
+                            <button class="button buttonCard" type="button" onclick="window.location.href='${anime.url}'">CONOCER MÁS</button>
+                        </div>
                     </div>
                 </div>
-
-
-
-
                 `
 
             }).join("");
@@ -89,6 +84,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         localStorage.lastResult = JSON.stringify(response);
     }
     
-    
+    function cortarTitle(titulo) {
+        let titulo = titulo.split(':');
+        titulo[1] = `<br/><span class="subtitulo">${titulo[1]}</span>`;
+        titulo.join(': ');
+        return titulo
+    }
     
 });
