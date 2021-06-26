@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function(){
 const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         termino = document.getElementById('busqueda'),
         btnBuscar = document.getElementById('buscar'),
-        video = [{'nombre':'historia_anime'}];
+        videos = [{'nombre':'historia_anime'}];
 
         btnBuscar.addEventListener('click', function(){
             consulta(termino.value);
