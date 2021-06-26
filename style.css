@@ -9,8 +9,9 @@ body {
     font-family: 'Monstserrat','Helvetica', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background:url('../img/fondo.svg');
+    background: url(../img/fondo.jpg);
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -103,11 +104,11 @@ h1 {
     color:#E51F38;
 }
 h2 {
-    font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
-	font-size: 60px;
-	font-weight: 500;
-	letter-spacing: -0.5px;
-    color:#E51F38;
+    font-family: 'Roboto Mono','Helvetica',sans-serif;
+    font-size: 60px;
+    font-weight: 200;
+    letter-spacing: -0.5px;
+    color: #E51F38;
 }
 h3 {
 	font-size: 48px;
@@ -144,13 +145,16 @@ h6 {
 .contenedor_busqueda {
     background: white;
     position: fixed;
-    height: 100vh;
+    top: 22vh;
+    /* height: 100vh; */
     width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding:4vw;
+    padding: 1vw;
+    padding-left: 3vw;
+    border-left: 15px solid #e51f38;
 }
 
 .subtitulo {
