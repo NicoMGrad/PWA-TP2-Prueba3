@@ -9,7 +9,7 @@ body {
     font-family: 'Monstserrat','Helvetica', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background:url('./img/fondo.svg');
+    background:url('../img/fondo.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
