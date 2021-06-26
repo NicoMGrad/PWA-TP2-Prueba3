@@ -54,15 +54,14 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     <div class="optional-header">
                     <div class="primary-title">
                         <div class="title">${anime.type}</div>
-                        <div class="subhead">Score: ${anime.score==0?1:anime.score} 
-                            <span class="material-icons">
-                                star
-                            </span>
+                        <div class="subhead">
+                        Score: <b>${anime.score==0?1:anime.score} </b>
+                        | Episodios: <b>${anime.episodes==0?1:anime.episodes}</b>
                         </div>
                     </div>
                     </div>
                     <div class="media media--16-9">
-                        <p class="numero">${findWithAttr(data.results,'title',anime.title)}</p>
+                        <p class="numero">${indiceItem(data.results,'title',anime.title)}</p>
                         <img src="${anime.image_url}" alt="${anime.title}" width="640" height="426">
                     </div>
                     <div class="primary-title">
@@ -91,7 +90,6 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         let nuevoTitle = '';
         if (titulo.includes(':')) {
             let aTitulo = titulo.split(":");
-            console.log(aTitulo);
             let parteDos = aTitulo[1];
             aTitulo[1] = `<br/><span class="subtitulo">${parteDos}</span>`;
             nuevoTitle = aTitulo.join(": ");
@@ -101,22 +99,14 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         return nuevoTitle
     }
 
-    function numero([objeto],titulo) {
-        let objetito = objeto;
-        console.log(objeto);
-        let titulito = titulo;
-        console.log(titulito);
-        let findNum = objetito.indexOf(titulito);
-        return findNum
-    }
 
-    function findWithAttr(array, attr, value) {
-        for(var i = 0; i < array.length; i += 1) {
-            if(array[i][attr] === value) {
-                return i;
+    function indiceItem(array, attr, valor) {
+        for(let i = 0; i < array.length; i += 1) {
+            if(array[i][attr] === valor) {
+                return i+1;
             }
         }
-        return -1;
+        return 1;
     }
     
 });
