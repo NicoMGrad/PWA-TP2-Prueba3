@@ -85,11 +85,16 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     }
     
     function cortarTitle(titulo) {
-        let aTitulo = titulo.split(":");
-        console.log(aTitulo);
-        let parteDos = aTitulo[1];
-        aTitulo[1] = `<br/><span class="subtitulo">${parteDos}</span>`;
-        let nuevoTitle = aTitulo.join(": ");
+        let nuevoTitle = '';
+        if (titulo.includes(':')) {
+            let aTitulo = titulo.split(":");
+            console.log(aTitulo);
+            let parteDos = aTitulo[1];
+            aTitulo[1] = `<br/><span class="subtitulo">${parteDos}</span>`;
+            nuevoTitle = aTitulo.join(": ");
+        } else {
+            nuevoTitle = titulo;
+        }
         return nuevoTitle
     }
     
