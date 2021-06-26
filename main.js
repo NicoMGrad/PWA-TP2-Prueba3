@@ -71,12 +71,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     <div class="supporting-text">${anime.synopsis}</div>
                     <div class="actions">
                         <div class="action-buttons">
-                            <button class="button buttonCard btnMiRipple" type="button" onclick="window.location.href='${anime.url}'">+</button>
+                            <button class="button buttonCard miRipple" type="button" onclick="window.location.href='${anime.url}'">+</button>
                         </div>
                     </div>
                 </div>
                 `
-
             }).join("");
     }
     
