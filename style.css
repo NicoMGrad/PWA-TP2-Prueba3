@@ -311,9 +311,10 @@ h6 {
 
 .card:hover {
     transform: translate(-10px,-10px);
-    -moz-box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%)
-	-webkit-box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%)
-	box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%)
+    -moz-box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%);
+	-webkit-box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%);
+	box-shadow: 10px 12px 11px -2px rgb(0 0 0 / 15%), 2px 2px 15px 0 rgb(0 0 0 / 9%), 5px 13px 10px 0 rgb(0 0 0 / 5%);
+    cursor:pointer;
 }
 
 #resultados {
@@ -686,6 +687,7 @@ h6 {
     border: none;
     font-size: 17px;
     border-bottom: 2px solid #221689;
+    outline: none;
   }
   .input-data input:focus ~ label,
   .input-data input:valid ~ label{
