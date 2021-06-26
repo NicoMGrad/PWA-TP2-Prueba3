@@ -144,7 +144,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     });
 
-    función storeVideo(mp4Blob, webmBlob, nombre) {
+    function storeVideo(mp4Blob, webmBlob, nombre) {
         // Abre transacción, obtiene el almacén de objetos; lo convierte en lectura y escritura para que podamos escribir en el IDB
         let objectStore = db.transaction(['videos_os'], 'readwrite').objectStore('videos_os');
         // Crea un registro para agregar al IDB
@@ -175,7 +175,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         source2.src = webmURL;
         source2.type = 'video/webm';
 
-        const resultados = document.getElementById('resultados');
+        const resultados = document.getElementById('video');
         resultados.appendChild(video);
         video.appendChild(source1);
         video.appendChild(source2);
