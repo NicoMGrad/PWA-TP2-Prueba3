@@ -87,8 +87,8 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     function cortarTitle(titulo) {
         titulo.split(':');
         titulo[1] = `<br/><span class="subtitulo">${titulo[1]}</span>`;
-        titulo.join(': ');
-        return titulo
+        let nuevoTitle = titulo.join(': ');
+        return nuevoTitle
     }
     
 });
