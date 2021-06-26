@@ -2,18 +2,19 @@ window.addEventListener('DOMContentLoaded', function(){
 
 const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         termino = document.getElementById('busqueda'),
-        btnBuscar = document.getElementById('buscar');
+        btnBuscar = document.getElementById('buscar'),
+        video = { 'nombre': 'historia_anime'};
 
         btnBuscar.addEventListener('click', function(){
             consulta(termino.value);
-            console.log(termino.value);
+            termino.value = '';
         });
     
         termino.addEventListener('keypress',function(){
-        if (event.key === "Enter") {
-            event.preventDefault();
+        if (e.key === "Enter") {
+            e.preventDefault();
             consulta(termino.value);
-            console.log(termino.value);
+            termino.value = '';
         }
     });
 
@@ -107,5 +108,22 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
         return 1;
     }
+
+    function init() {
+        for(let i = 0; i < videos.length; i++) {
+          let objectStore = db.transaction('videos_os').objectStore('videos_os');
+          let request = objectStore.get(videos[i].name);
+          request.onsuccess = function() {
+            if(request.result) {
+              // Toma los videos del IDB y los muestra usando displayVideo()
+              console.log('tomando videos del IDB');
+              displayVideo(request.result.mp4, request.result.webm, request.result.name);
+            } else {
+              // Recuperar los videos de la red
+              fetchVideoFromNetwork(videos[i]);
+            }
+          };
+        }
+      }
     
 });
