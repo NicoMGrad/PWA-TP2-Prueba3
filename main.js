@@ -124,7 +124,7 @@ window.onload = function() {
                 if(request.result) {
                 // Toma los videos del IDB y los muestra usando displayVideo()
                     console.log('tomando videos del IDB');
-                    displayVideo(request.result.mp4, request.result.webm, request.result.name);
+                    displayVideo(request.result.mp4, request.result.webm, request.result.nombre);
                 } else {
                 // Recuperar los videos de la red
                     fetchVideoFromNetwork(videos[i]);
@@ -146,9 +146,9 @@ window.onload = function() {
         Promise.all([mp4Blob, webmBlob]).then(function(values) {
 
         // muestra el video obtenido de la red con displayVideo()
-        displayVideo(values[0], values[1], video.nombre);
+        displayVideo(values[0], values[1], videos.nombre);
         // lo almacena en el IDB usando storeVideo()
-        storeVideo(values[0], values[1], video.nombre);
+        storeVideo(values[0], values[1], videos.nombre);
 
         });
     }
