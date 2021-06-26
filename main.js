@@ -101,8 +101,8 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         return nuevoTitle
     }
 
-    function numero({objeto},titulo) {
-        let objetito = {objeto};
+    function numero([objeto],titulo) {
+        let objetito = objeto;
         console.log(objetito);
         let title = titulo;
         let findNum = objetito.findIndex(title);
