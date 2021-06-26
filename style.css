@@ -736,18 +736,23 @@ h6 {
 
 
   .btnMiRipple {
-      border: none;
-      border-radius: 2px;
-      padding: 12px 18px;
-      font-size: 16px;
-      text-transform: uppercase;
-      cursor: pointer;
-      background-color: teal;
-      box-shadow: 0 0 4px #999;
-      outline: none;
-      color: white;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Mono';
+    letter-spacing: 2px;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #e51f38;
+    outline: none;
+    color: white;
   }
-
+  .btnMiRipple span {
+      margin-right: .2rem;
+  }
+  
   .miRipple {
       background-position: center;
       transition: background 0.8s;
@@ -758,7 +763,7 @@ h6 {
     background-color: #221689;
     background-image: radial-gradient(circle,transparent 1%, #221689 1%);
     background-position: center;
-    background-size: 1500%;
+    background-size: 15000%;
   }
 
   .miRipple:active {
