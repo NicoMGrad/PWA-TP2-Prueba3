@@ -733,3 +733,37 @@ h6 {
   input:-internal-autofill-selected {
       background-color: white!important;
   }
+
+
+  .btnMiRipple {
+      border: none;
+      border-radius: 2px;
+      padding: 12px 18px;
+      font-size: 16px;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-color: teal;
+      box-shadow: 0 0 4px #999;
+      outline: none;
+      color: white;
+  }
+
+  .miRipple {
+      background-position: center;
+      transition: background 0.8s;
+      
+  }
+
+  .miRipple:hover {
+    background-size: 15000%;
+    background-color: rgb(18, 187, 170);
+    background-image: radial-gradient(circle,transparent 1%, rgb(18, 187, 170));
+    background-position: center;
+  }
+
+  .miRipplez:active {
+      transition: background 0s;
+      background-color: #6200EE;
+      background-size: 100%;
+  }
+
