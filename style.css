@@ -678,27 +678,34 @@ h6 {
 /*INPUT*/
 
 .wrapper{
-    width: 450px;
+    width: 85%;
     background: #fff;
   }
   .wrapper .input-data{
-    height: 40px;
+    height: 4rem;
     width: 100%;
+    color: #221689!important;
     position: relative;
   }
   .wrapper .input-data input{
+    font-family: 'Roboto Mono';
+    color: #221689!important;
+    /* margin-top: .5rem; */
     height: 100%;
     width: 100%;
     border: none;
-    font-size: 17px;
+    font-size: 2.5rem;
+    font-weight: 100;
     border-bottom: 2px solid #221689;
     outline: none;
+    background: white;
   }
   .input-data input:focus ~ label,
   .input-data input:valid ~ label{
-    transform: translateY(-20px);
+    transform: translateY(-58px);
     font-size: 15px;
     color: #E51F38;
+    background: #ffffff;
   }
   .wrapper .input-data label{
     position: absolute;
@@ -752,7 +759,7 @@ h6 {
   .btnMiRipple span {
       margin-right: .2rem;
   }
-  
+
   .miRipple {
       background-position: center;
       transition: background 0.8s;
