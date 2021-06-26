@@ -215,7 +215,7 @@ window.onload = function() {
 
         // Create an objectStore to store our videos in (basically like a single table)
         // including a auto-incrementing key
-        let objectStore = db.createObjectStore('videos_os', { keyPath: 'name' });
+        let objectStore = db.createObjectStore('videos_os', { keyPath: 'nombre' });
 
         // Define what data items the objectStore will contain
         objectStore.createIndex('mp4', 'mp4', { unique: false });
