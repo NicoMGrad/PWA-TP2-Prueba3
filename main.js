@@ -61,7 +61,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                         </div>
                     </div>
                     </div>
-                    <div class="media media--16-9"> <img src="${anime.image_url}" alt="" width="640" height="426"> </div>
+                    <div class="media media--16-9"> <img src="${anime.image_url}" alt="${anime.title}" width="640" height="426"> </div>
                     <div class="primary-title">
                     <div class="primary-text">${anime.title}</div>
                     <div class="secondary-text">${anime.airing==true? 'En emisión':'Finalizado'}</div>
