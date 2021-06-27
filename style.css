@@ -14,6 +14,7 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 hr {
@@ -842,3 +843,79 @@ h6 {
       background-size: 100%;
   }
 
+
+@media screen and (max-width:800px) {
+    header {
+        position: fixed;
+        background: white;
+        top: 0;
+        width: 100%;
+        height: 8rem;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+    }
+    .logo {
+        height: 2rem;
+        width: auto;
+        /* margin-right: 3rem; */
+        margin-bottom: 1rem;
+    }
+    .contenedor_busqueda {
+        background: white;
+        position:unset;
+        top: 0;
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 2vw 1vw;
+        padding-left: 3vw;
+        border-left: none;
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+    }
+    h1 {
+        font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
+        line-height: 13vw;
+        font-size: 12vw;
+        font-weight: 800;
+        letter-spacing: -1.5px;
+        color: #E51F38;
+    }
+    h2 {
+        font-size: 1rem;
+        position: unset;
+        top: unset;
+    }
+    .base {
+        width: 100%;
+        font-size: .9rem;
+    }
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btnMiRipple {
+        margin-bottom: 1rem;
+        justify-content: center;
+        width: 70%;
+    }
+    #resultados {
+        width: 100%;
+        position: unset;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+    
+}
