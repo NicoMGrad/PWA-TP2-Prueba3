@@ -1,4 +1,5 @@
 const resultados = document.getElementById('resultados');
+const cuadroBusqueda = document.querySelector('.contenedor_busqueda');
 
 // Chequeo si el browser puede usar Service Worker
 if ('serviceWorker' in navigator) {
@@ -13,6 +14,8 @@ else {
 
 // Event Listener para Offline/ Online Status
 window.addEventListener('offline', event => {
+  cuadroBusqueda.firstChild.innerHTML = '404<br/>ERROR!'
+  cuadroBusqueda.firstChild.nextSibling.innerHTML = 'SIN INTERNET'
   resultados.innerHTML = `
     <div class="historia">
     <h3>La historia<br/>del <span>animé</span></h3>
