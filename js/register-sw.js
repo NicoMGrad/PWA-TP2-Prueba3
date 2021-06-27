@@ -20,7 +20,12 @@ window.addEventListener('offline', event => {
     <p class="base">
         Por otra parte se cree que es una palabra de origen francés.3​ El anime es un medio de gran expansión en Japón, siendo al mismo tiempo un producto de entretenimiento comercial y cultural, lo que ha ocasionado un fenómeno cultural en masas populares y una forma de arte tecnológico. <span>potencialmente dirigido a todos los públicos, desde niños, adolescentes, adultos;</span> hasta especializaciones de clasificación esencialmente tomada de la existente para el manga, con clases base diseñadas para especificaciones sociodemográficos tales como empleados, amas de casa, estudiantes, etc. Por lo tanto, pueden hacer frente a los sujetos, temas y <span>géneros tan diversos</span> como el amor, aventura, ciencia ficción, cuentos infantiles, literatura, deportes, horror, fantasía, comedia y muchos otros.</p>
 
-        <div id="video"></div>
+        <div id="video">
+          <video controls="">
+            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/videos/historia_anime.mp4" type="video/mp4">
+            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/13fcd72e-e64b-4505-976a-23791aba7e41" type="video/webm">
+          </video>
+        </div>
 
         <p class="base">El anime tradicionalmente <span>dibujado a mano y al principio los procesos realizados de forma digital eran muy específicos</span> (retoque y montaje). Sin embargo, en la actualidad las tareas más comunes dentro de la producción de una animación, como podría ser el coloreado o los efectos visuales (brillos, sombras, luz ambiental, etc.), se hacen con aplicaciones digitales, que permiten un mayor control sobre el trabajo y ayudan a agilizar la labor de los dibujantes a niveles insospechados en un proceso de animación tradicional.6​ Sus guiones incluyen gran parte de los géneros de ficción y son transmitidos a través de medios audiovisuales (transmisión por televisión, distribución en formatos de vídeo doméstico y películas con audio). <span>La relación del anime con el manga es estrecha</span>, pues históricamente una gran cantidad de series y trabajos de anime se basan en historias de manga populares. Además, también guarda estrecha relación con las novelas visuales.</p>
 
@@ -68,7 +73,12 @@ if (!navigator.onLine) {
     <p class="base">
         Por otra parte se cree que es una palabra de origen francés.3​ El anime es un medio de gran expansión en Japón, siendo al mismo tiempo un producto de entretenimiento comercial y cultural, lo que ha ocasionado un fenómeno cultural en masas populares y una forma de arte tecnológico. <span>potencialmente dirigido a todos los públicos, desde niños, adolescentes, adultos;</span> hasta especializaciones de clasificación esencialmente tomada de la existente para el manga, con clases base diseñadas para especificaciones sociodemográficos tales como empleados, amas de casa, estudiantes, etc. Por lo tanto, pueden hacer frente a los sujetos, temas y <span>géneros tan diversos</span> como el amor, aventura, ciencia ficción, cuentos infantiles, literatura, deportes, horror, fantasía, comedia y muchos otros.</p>
 
-        <div id="video"></div>
+        <div id="video">
+          <video controls="">
+            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/ef864065-188e-47e2-853d-0f7c3435131e" type="video/mp4">
+            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/13fcd72e-e64b-4505-976a-23791aba7e41" type="video/webm">
+          </video>
+        </div>
 
         <p class="base">El anime tradicionalmente <span>dibujado a mano y al principio los procesos realizados de forma digital eran muy específicos</span> (retoque y montaje). Sin embargo, en la actualidad las tareas más comunes dentro de la producción de una animación, como podría ser el coloreado o los efectos visuales (brillos, sombras, luz ambiental, etc.), se hacen con aplicaciones digitales, que permiten un mayor control sobre el trabajo y ayudan a agilizar la labor de los dibujantes a niveles insospechados en un proceso de animación tradicional.6​ Sus guiones incluyen gran parte de los géneros de ficción y son transmitidos a través de medios audiovisuales (transmisión por televisión, distribución en formatos de vídeo doméstico y películas con audio). <span>La relación del anime con el manga es estrecha</span>, pues históricamente una gran cantidad de series y trabajos de anime se basan en historias de manga populares. Además, también guarda estrecha relación con las novelas visuales.</p>
 
