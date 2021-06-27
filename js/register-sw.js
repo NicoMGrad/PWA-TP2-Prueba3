@@ -29,7 +29,7 @@ window.addEventListener('offline', event => {
     </p>
   </div>
   `;
-  //cargaVideo();
+  cargaVideo();
 });
 
 window.addEventListener('online', event => {
@@ -46,8 +46,9 @@ window.addEventListener('online', event => {
       <p class="base">El anime tradicionalmente <span>dibujado a mano y al principio los procesos realizados de forma digital eran muy específicos</span> (retoque y montaje). Sin embargo, en la actualidad las tareas más comunes dentro de la producción de una animación, como podría ser el coloreado o los efectos visuales (brillos, sombras, luz ambiental, etc.), se hacen con aplicaciones digitales, que permiten un mayor control sobre el trabajo y ayudan a agilizar la labor de los dibujantes a niveles insospechados en un proceso de animación tradicional.6​ Sus guiones incluyen gran parte de los géneros de ficción y son transmitidos a través de medios audiovisuales (transmisión por televisión, distribución en formatos de vídeo doméstico y películas con audio). <span>La relación del anime con el manga es estrecha</span>, pues históricamente una gran cantidad de series y trabajos de anime se basan en historias de manga populares. Además, también guarda estrecha relación con las novelas visuales.</p>
 
       <p class="base"> El anime se caracteriza fundamentalmente por el uso particular de la llamada animación limitada, la expresión en plano, la suspensión del tiempo, su amplitud temática, la presencia de personajes históricos, su compleja línea narrativa y sobre todo, un peculiar estilo de dibujo, con personajes caracterizados por ojos grandes y ovalados, de línea muy definida, colores llamativos y movimiento reducido de los labios.</p>
-  </p>
-</div>`;
+        </p>
+      </div>`;
+      cargaVideo();
 });
 
 // A veces este evento falla, ojo!
