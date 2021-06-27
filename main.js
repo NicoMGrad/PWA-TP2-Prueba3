@@ -111,7 +111,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     
     
 });
-
+/*
 window.onload = function() {
 
     function cargaVideo() {
@@ -228,4 +228,4 @@ window.onload = function() {
         }
     }
     cargaVideo();
-}
+}*/
