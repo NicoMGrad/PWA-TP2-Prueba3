@@ -1,12 +1,12 @@
 {
     "theme_color": "#3547f6",
-    "background_color": "#ffffff",
+    "background_color": "#221689",
     "display": "fullscreen",
     "scope": "/",
     "start_url": "index.html",
-    "name": "Catedra PWA",
-    "short_name": "CAT PWA",
-    "description": "PWA Boilerplate",
+    "name": "Ohayo Akihabara!",
+    "short_name": "OA!",
+    "description": "ANIME|MANGA|VIDEOGAMES",
     "prefer_related_applications": false,
     "icons": [
         {

@@ -63,7 +63,7 @@ header nav ul {
     list-style-type: none;
 }
 
-nav ul li {
+nav ul li a {
     font-family: 'Roboto Mono','Helvetica',sans-serif;
     font-size: .9rem;
     font-weight: 600;
@@ -71,7 +71,7 @@ nav ul li {
     color: #001c41;
     margin: 1rem;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: uppercase; 
 }
 
 nav li:hover {

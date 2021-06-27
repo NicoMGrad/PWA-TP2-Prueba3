@@ -1,5 +1,5 @@
 
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function(){
 
     function cargaVideo() {
 
@@ -115,4 +115,4 @@ window.onload = function() {
         }
     }
     cargaVideo();
-}
+});
