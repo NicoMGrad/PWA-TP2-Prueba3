@@ -10,9 +10,9 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         window.scrollTo(0,0);
     });
 
-    termino.addEventListener('keypress',function(){
-    if (Event.key === "Enter") {
-
+    termino.addEventListener('keyup',function(event){
+        event.preventDefault;
+    if (event.keyCode === 13) {
         consulta(termino.value);
         window.scrollTo(0,0);
         }
@@ -52,9 +52,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             console.log('result', response);
             if (response.ok === true) {
                 return response.json();
-                
-            /*}else {
-                noResultsElement.classList.add(showClass);*/
+
             }
         }).then(result => {
             console.log(result);
@@ -64,7 +62,6 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             }
         }).catch(err => {
             console.log('Ha habido un problema', err);
-            //noResultsElement.classList.add(showClass);
         });
     
     }
@@ -76,7 +73,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
-                    <div class="card">
+                    <div class="card" onclick="window.location.href='${anime.url}'">
                     <div class="optional-header">
                     <div class="primary-title">
                         <div class="title">${anime.type}</div>
