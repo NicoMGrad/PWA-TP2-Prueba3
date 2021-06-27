@@ -19,7 +19,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             setTimeout(function(){
                 consulta(termino.value);
                 window.scrollTo(0,0);
-            },200);    
+            },1000);    
         }
     });
 
