@@ -12,7 +12,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     termino.addEventListener('keypress',function(){
     if (Event.key === "Enter") {
-        Event.preventDefault();
+
         consulta(termino.value);
         window.scrollTo(0,0);
         }
