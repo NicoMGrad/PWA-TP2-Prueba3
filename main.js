@@ -7,14 +7,17 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     btnBuscar.addEventListener('click', function(){
         consulta(termino.value);
-        window.scrollTo(0,0);
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'});
     });
 
-    termino.addEventListener('keyup',function(event){
+    termino.addEventListener('keypress',function(event){
         event.preventDefault;
-    if (event.keyCode === 13) {
-        consulta(termino.value);
-        window.scrollTo(0,0);
+        if (event.key === "Enter") {
+            consulta(termino.value);
+            window.scrollTo(0,0);
         }
     });
 
