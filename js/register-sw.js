@@ -64,7 +64,7 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
-  if (window.location.href.includes(historia)) {
+  if (window.location.href.includes('historia')) {
     cuadroBusqueda.innerHTML =`
       <h1>Ohayoo<br/>Historia!</h1>
       <h2>ANIME|MANGA|VIDEOGAMES</h2>
@@ -73,22 +73,6 @@ window.addEventListener('online', event => {
               ¿Siempre te preguntaste cómo nació este maravilloso arte?¿Cómo es que un pequeño país aislado se volvió una potencia cultural? Chequeá esta nota donde te contamos los orígenes del animé japonés.
           </span>
       </p>
-      <form>
-
-          <div class="wrapper">
-              <div class="input-data">
-                <input type="text" id="busqueda" value="" title="Search" required>
-                <div class="underline"></div>
-                <label>Busca tu animé, onii-chan</label>
-              </div>
-          </div>
-          <button type="button" class="btnMiRipple miRipple" id="buscar">
-              <span class="material-icons">
-                  search
-              </span>
-              Buscar
-          </button>
-      </form>
     `;
   } else {
   cuadroBusqueda.innerHTML =`
