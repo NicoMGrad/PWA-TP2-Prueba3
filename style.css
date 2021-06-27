@@ -74,7 +74,7 @@ nav ul li a {
     text-transform: uppercase; 
 }
 
-nav li:hover {
+nav li a:hover {
     color: #E51F38;
     cursor: pointer;
 }
