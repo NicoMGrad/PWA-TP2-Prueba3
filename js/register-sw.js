@@ -49,7 +49,7 @@ window.addEventListener('offline', event => {
 
         <div id="video">
           <video controls="">
-            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/videos/historia_anime.mp4" type="video/mp4">
+            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/videos/ef864065-188e-47e2-853d-0f7c3435131e" type="video/mp4">
             <source src="blob:https://pwa-tp-2-prueba3.vercel.app/13fcd72e-e64b-4505-976a-23791aba7e41" type="video/webm">
           </video>
         </div>
