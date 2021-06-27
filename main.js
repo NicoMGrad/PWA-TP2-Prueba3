@@ -18,6 +18,30 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     });
 
+
+    if (localStorage) {
+        resultados(retrieveFormLocalStorage());
+    } else {
+        consulta(anime);
+        storeInLocalStorage();
+    }
+
+    /*
+    function isInLocalStorage () {
+        return localStorage.lastResult;
+    }*/
+    function storeInLocalStorage (response) {
+        localStorage.lastResult = JSON.stringify(response);
+    }
+    function retrieveFormLocalStorage () {
+        return JSON.parse(localStorage.lastResult);
+    }
+    /*
+    if (isInLocalStorage()) {
+        let lastResult = retrieveFormLocalStorage();
+    }*/
+
+
     
     function consulta(anime){
         const fetchPromise = fetch(`${base_URL}?q=${anime}&page=1`);
@@ -108,21 +132,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         return 1;
     }
     
-    function isInLocalStorage () {
-        return localStorage.lastResult;
-    }
-    function storeInLocalStorage (response) {
-        localStorage.lastResult = JSON.stringify(response);
-    }
-    function retrieveFormLocalStorage () {
-        return JSON.parse(localStorage.lastResult);
-    }
-    if (isInLocalStorage()) {
-        let lastResult = retrieveFormLocalStorage();
-        makeGrid(lastResult);
-        resultsElement.classList.add(showClass);
-        mapContainer.classList.add(showClass);
-    }
+    
     
 });
 
