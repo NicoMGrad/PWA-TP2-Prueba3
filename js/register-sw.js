@@ -29,6 +29,7 @@ window.addEventListener('offline', event => {
     </p>
   </div>
   `;
+  cargaVideo();
 });
 
 window.addEventListener('online', event => {
