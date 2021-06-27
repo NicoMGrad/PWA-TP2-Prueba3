@@ -14,8 +14,32 @@ else {
 
 // Event Listener para Offline/ Online Status
 window.addEventListener('offline', event => {
-  cuadroBusqueda.firstChild.innerHTML = '404<br/>ERROR!'
-  cuadroBusqueda.firstChild.nextSibling.innerHTML = 'SIN INTERNET'
+  cuadroBusqueda.innerHTML = `
+    <h1>418<br/>ERROR</h1>
+    <h2>SOY UNA TETERA</h2>
+    <p class="base">
+        <span>
+            Chiste, aún no somos una tetera pero lamentablemente detectamos que no estás conectado a internet.
+            ¡No desesperes! Intentaremos conectarnos, pero mientras conocé más de este fantástico mundo que es el animé.
+        </span>
+    </p>
+    <form>
+
+        <div class="wrapper">
+            <div class="input-data">
+              <input type="text" id="busqueda" value="" title="Search" required>
+              <div class="underline"></div>
+              <label>Busca tu animé, onii-chan</label>
+            </div>
+        </div>
+        <button type="button" class="btnMiRipple miRipple" id="buscar">
+            <span class="material-icons">
+                search
+            </span>
+            Buscar
+        </button>
+    </form>
+  `;
   resultados.innerHTML = `
     <div class="historia">
     <h3>La historia<br/>del <span>animé</span></h3>
@@ -40,6 +64,59 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
+  if (window.location.href.includes(historia)) {
+    cuadroBusqueda.innerHTML =`
+      <h1>Ohayoo<br/>Historia!</h1>
+      <h2>ANIME|MANGA|VIDEOGAMES</h2>
+      <p class="base">
+          <span>
+              ¿Siempre te preguntaste cómo nació este maravilloso arte?¿Cómo es que un pequeño país aislado se volvió una potencia cultural? Chequeá esta nota donde te contamos los orígenes del animé japonés.
+          </span>
+      </p>
+      <form>
+
+          <div class="wrapper">
+              <div class="input-data">
+                <input type="text" id="busqueda" value="" title="Search" required>
+                <div class="underline"></div>
+                <label>Busca tu animé, onii-chan</label>
+              </div>
+          </div>
+          <button type="button" class="btnMiRipple miRipple" id="buscar">
+              <span class="material-icons">
+                  search
+              </span>
+              Buscar
+          </button>
+      </form>
+    `;
+  } else {
+  cuadroBusqueda.innerHTML =`
+    <h1>Ohayoo<br/>Akihabara!</h1>
+    <h2>ANIME|MANGA|VIDEOGAMES</h2>
+    <p class="base">
+        <span>
+            ¡Bienvenido a Ohayo Akihabara! Consultá el estado de tu animé favorito, chequeá los OVAS o capítulos especiales y enterate de las últimas películas publicadas. Simplemente insertá el nombre debajo y el buscador te mostrará toda la información de ese animé. Itadaikimasu!
+        </span>
+    </p>
+    <form>
+
+        <div class="wrapper">
+            <div class="input-data">
+              <input type="text" id="busqueda" value="" title="Search" required>
+              <div class="underline"></div>
+              <label>Busca tu animé, onii-chan</label>
+            </div>
+        </div>
+        <button type="button" class="btnMiRipple miRipple" id="buscar">
+            <span class="material-icons">
+                search
+            </span>
+            Buscar
+        </button>
+    </form>
+  `;
+  }
   resultados.innerHTML= ` 
       <div class="historia">
         <h3>La historia<br/>del <span>animé</span></h3>
