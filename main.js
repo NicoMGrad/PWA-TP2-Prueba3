@@ -191,7 +191,7 @@ window.onload = function() {
     }
 
     // (see onupgradeneeded below)
-    let request = window.indexedDB.open('videos_os', 1);
+    let request = window.indexedDB.open('videos_db', 1);
 
     // onerror handler signifies that the database didn't open successfully
     request.onerror = function() {

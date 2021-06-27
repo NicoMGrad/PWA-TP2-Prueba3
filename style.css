@@ -85,6 +85,10 @@ nav li:hover {
     margin-right: 3rem;
 }
 
+video {
+    width: 100%;
+}
+
 @media screen and (min-width:600px) {
     main {
         flex-direction: row;
