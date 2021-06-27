@@ -109,10 +109,15 @@ h1 {
 }
 h2 {
     font-family: 'Roboto Mono','Helvetica',sans-serif;
-    font-size: 60px;
-    font-weight: 200;
-    letter-spacing: -0.5px;
-    color: #E51F38;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: #221689;
+    position: absolute;
+    background: white;
+    padding: 0 .7rem;
+    border: 2.5px solid #221689;
+    top: 20%;
 }
 h3 {
 	font-size: 6rem;
@@ -153,13 +158,15 @@ h6 {
     font-family: 'Roboto Mono',monospace;
     font-size: .9rem;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.5;
     font-weight: 400;
     color: white;
     margin: .5rem 0rem 3rem;
-    background-color: #221689;
     text-transform: uppercase;
+}
 
+.contenedor_busqueda .base span {
+    background-color: #221689;
 }
 
 .historia {
@@ -203,7 +210,7 @@ h6 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 1vw;
+    padding: 2vw 1vw;
     padding-left: 3vw;
     border-left: 15px solid #e51f38;
 }
