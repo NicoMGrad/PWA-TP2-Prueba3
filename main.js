@@ -32,7 +32,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     btnBuscar.addEventListener('click', function(){
         consulta(termino.value);
-        if (wWidth) {
+        if (wWidth == true) {
             window.scrollTo({
                 bottom: 0,
                 left: 0,
@@ -63,7 +63,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         if (event.key === "Enter") {
 
             consulta(termino.value);
-            if (wWidth) {
+            if (wWidth == true) {
                 setTimeout(function(){
                     window.scrollTo({
                         bottom: 0,
