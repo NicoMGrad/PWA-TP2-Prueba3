@@ -881,7 +881,7 @@ h6 {
         /*margin-top: 7rem;*/
         margin-bottom: 0rem;
     }
-    .desplegar {
+    #desplegar {
         display: flex;
         position: unset;
         align-self: center;
