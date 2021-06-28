@@ -4,10 +4,29 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         termino = document.getElementById('busqueda'),
         btnDesplegar = document.getElementById('desplegar'),
         wWidth = window.matchMedia("(max-width:800px)"),
-        cuadroBusqueda = document.querySelector('.contenedor_busqueda'),
+        cuadroBusqueda = document.querySelector('.contenedor_busqueda').style.marginTop,
         cuadroResultados = document.getElementById('resultados'),
         btnBuscar = document.getElementById('buscar');
         
+
+    function marginBusqueda(vOf,cuadro){
+        if (vOf) {
+            cuadro = '7rem';
+        }
+        return cuadro
+    }
+
+    marginBusqueda(wWidth,cuadroBusqueda);
+
+    btnDesplegar.addEventListener('click', function(){
+        if (cuadroBusqueda == '7rem') {
+            cuadroBusqueda = '-28rem';
+            btnDesplegar.style.transform = 'rotate(-270deg)';
+        } else if (cuadroBusqueda == '-28rem'){
+            cuadroBusqueda = '7rem';
+            btnDesplegar.style.transform = 'rotate(-90deg)';
+        }
+    });
 
     btnBuscar.addEventListener('click', function(){
         consulta(termino.value);
@@ -26,6 +45,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             top: 0,
             left: 0,
             behavior: 'smooth'});
+            cuadroBusqueda.style.marginTop = '0rem';
         }
     });
 
@@ -65,25 +85,6 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 left: 0,
                 behavior: 'smooth'});
             cuadroBusqueda.style.marginTop = '-28rem';
-        }
-    });
-
-    function marginBusqueda(vOf,cuadro){
-        if (vOf) {
-            cuadro.style.marginTop = '7rem';
-        }
-        return cuadro.style.marginTop
-    }
-
-    marginBusqueda(wWidth,cuadroBusqueda);
-
-    btnDesplegar.addEventListener('click', function(){
-        if (cuadroBusqueda.style.marginTop == '7rem') {
-            cuadroBusqueda.style.marginTop = '-28rem';
-            btnDesplegar.style.transform = 'rotate(-270deg)';
-        } else if (cuadroBusqueda.style.marginTop == '-28rem'){
-            cuadroBusqueda.style.marginTop = '7rem';
-            btnDesplegar.style.transform = 'rotate(-90deg)';
         }
     });
     
