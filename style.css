@@ -170,6 +170,10 @@ h6 {
     background-color: #221689;
 }
 
+#desplegar {
+    display:none;
+}
+
 .historia {
     width: 90%;
     padding: 0em;
@@ -192,7 +196,7 @@ h6 {
     color: #221689;
     background: none;
     margin: .5rem 0rem 3rem;
-    text-transform: none;
+    text-transform: inherit;
     padding-top: .5rem;
 }
 
@@ -941,6 +945,17 @@ h6 {
         flex-direction: row;
         flex-wrap: nowrap;
         overflow: scroll;
+    }
+
+    .historia {
+        margin: 6vh auto 1vh;
+    }
+
+    .historia .base {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        padding-top: 1rem;
+        letter-spacing: -1px;
     }
     
 }

@@ -32,10 +32,39 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     termino.addEventListener('keypress',function(event){
         event.preventDefault;
         if (event.key === "Enter") {
-            setTimeout(function(){
-                consulta(termino.value);
-                window.scrollTo(0,0);
-            },1000);    
+
+            consulta(termino.value);
+            if (wWidth) {
+                setTimeout(function(){
+                    window.scrollTo({
+                        bottom: 0,
+                        left: 0,
+                        behavior: 'smooth'});
+                    cuadroResultados.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'});
+                    cuadroBusqueda.style.marginTop = '-28rem';
+                },1000);
+            } else {
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'});
+            }
+
+        } else if (event.keyCode === 13){
+
+            consulta(termino.value);
+            window.scrollTo({
+                bottom: 0,
+                left: 0,
+                behavior: 'smooth'});
+            cuadroResultados.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'});
+            cuadroBusqueda.style.marginTop = '-28rem';
         }
     });
 
