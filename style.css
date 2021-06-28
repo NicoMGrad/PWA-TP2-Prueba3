@@ -898,13 +898,11 @@ h6 {
         margin-top: -10px;
         margin-bottom: 2rem;
     }
-
+    /*
     #desplegar:target + .contenedor_busqueda {
         margin-top: -27rem;
         transition: all ease-in-out 200ms;
-    }
-
-    .desplegar:active
+    }*/
 
     h1 {
         font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
