@@ -863,6 +863,7 @@ h6 {
         width: auto;
         margin-top: .7rem;
         margin-bottom: 1rem;
+        margin-right: 0;
     }
     .contenedor_busqueda {
         background: white;
