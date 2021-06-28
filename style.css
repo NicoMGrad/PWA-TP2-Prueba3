@@ -877,18 +877,30 @@ h6 {
         padding: 2vw 1vw;
         padding-left: 3vw;
         border-left: none;
-        border-bottom: 3px solid #221689;
+        border-bottom: 9px solid #221689;
         margin-top: 7rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
     }
     .desplegar {
-        display: visible;
+        display: flex;
         position: absolute;
         align-self: center;
-        bottom: -10px;
+        bottom: -3.4rem;
         background: #221689;
-        height: 1rem;
-        width: 1rem;
+        height: 3.5rem;
+        width: 3rem;
+        line-height: 3rem;
+        font-size: 3rem;
+        transform: rotate(-90dSeg);
+        color: white;
+        align-content: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    #desplegar:target + .contenedor_busqueda {
+        margin-top: -27rem;
+        transition: all ease-in-out 200ms;
     }
 
     .desplegar:active
