@@ -8,7 +8,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         cuadroResultados = document.getElementById('resultados'),
         btnBuscar = document.getElementById('buscar');
 
-var marginBusqueda = cuadroBusqueda.style.marginTop;
+let marginBusqueda = cuadroBusqueda.style.marginTop;
 
 
     if (wWidth) {
