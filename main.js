@@ -10,7 +10,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
 
     function windowSize(viewport, cuadro){
-        if (viewport == true) {
+        if (viewport) {
             cuadro.style.marginTop = '7rem';
         } else {
             cuadro.style.marginTop = '0rem';
@@ -32,7 +32,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     btnBuscar.addEventListener('click', function(){
         consulta(termino.value);
-        if (wWidth == true) {
+        if (wWidth) {
             window.scrollTo({
                 bottom: 0,
                 left: 0,
@@ -63,7 +63,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         if (event.key === "Enter") {
 
             consulta(termino.value);
-            if (wWidth == true) {
+            if (wWidth) {
                 setTimeout(function(){
                     window.scrollTo({
                         bottom: 0,
