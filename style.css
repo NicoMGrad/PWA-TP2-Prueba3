@@ -878,12 +878,12 @@ h6 {
         padding-left: 3vw;
         border-left: none;
         border-bottom: 9px solid #221689;
-        margin-top: 7rem;
+        /*margin-top: 7rem;*/
         margin-bottom: 0rem;
     }
     .desplegar {
         display: flex;
-        position: absolute;
+        position: unset;
         align-self: center;
         bottom: -3.4rem;
         background: #221689;
@@ -891,10 +891,11 @@ h6 {
         width: 3rem;
         line-height: 3rem;
         font-size: 3rem;
-        transform: rotate(-90dSeg);
+        transform: rotate(-90deg);
         color: white;
         align-content: center;
         justify-content: center;
+        margin-top: -10px;
         margin-bottom: 2rem;
     }
 

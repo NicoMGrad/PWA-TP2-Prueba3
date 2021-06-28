@@ -2,6 +2,9 @@ window.addEventListener('DOMContentLoaded', function(){
 
 const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         termino = document.getElementById('busqueda'),
+        btnDesplegar = document.getElementById('desplegar'),
+        wWidth = window.matchMedia("(max-width:800px)"),
+        cuadroBusqueda = document.querySelector('.contenedor_busqueda')
         btnBuscar = document.getElementById('buscar');
         
 
@@ -22,6 +25,24 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             },1000);    
         }
     });
+
+    function marginBusqueda(vOf,cuadro){
+        if (vOf) {
+            cuadro.style.marginTop = '7rem';
+        }
+        return cuadro.style.marginTop
+    }
+
+    marginBusqueda(wWidth,cuadroBusqueda);
+
+    btnDesplegar.addEventListener('click', function(){
+        if (cuadro.style.marginTop == '7rem') {
+            cuadro.style.marginTop == '-27rem';
+        } else {
+            cuadro.style.marginTop == '7rem';
+        }
+    });
+    
 
 
     if (localStorage) {
