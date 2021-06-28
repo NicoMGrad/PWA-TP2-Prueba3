@@ -9,12 +9,14 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         btnBuscar = document.getElementById('buscar');
 
 
-
-    if (wWidth) {
-        cuadroBusqueda.style.marginTop = '7rem';
-    } else {
-        cuadroBusqueda.style.marginTop = '0rem';
-    }
+    window.addEventListener('resize', function(){
+        if (wWidth) {
+            cuadroBusqueda.style.marginTop = '7rem';
+        } else {
+            cuadroBusqueda.style.marginTop = '0rem';
+        }
+    });
+    
 
     btnDesplegar.addEventListener('click', function(){
         if (cuadroBusqueda.style.marginTop == '7rem') {
