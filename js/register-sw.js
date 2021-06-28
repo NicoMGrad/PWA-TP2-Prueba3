@@ -23,22 +23,6 @@ window.addEventListener('offline', event => {
             ¡No desesperes! Intentaremos conectarnos, pero mientras conocé más de este fantástico mundo que es el animé.
         </span>
     </p>
-    <form>
-
-        <div class="wrapper">
-            <div class="input-data">
-              <input type="text" id="busqueda" value="" title="Search" required>
-              <div class="underline"></div>
-              <label>Busca tu animé, onii-chan</label>
-            </div>
-        </div>
-        <button type="button" class="btnMiRipple miRipple" id="buscar">
-            <span class="material-icons">
-                search
-            </span>
-            Buscar
-        </button>
-    </form>
   `;
   resultados.innerHTML = `
     <div class="historia">
@@ -130,6 +114,16 @@ window.addEventListener('online', event => {
 // 
 
 if (!navigator.onLine) {
+  cuadroBusqueda.innerHTML = `
+    <h1>418<br/>ERROR</h1>
+    <h2>SOY UNA TETERA</h2>
+    <p class="base">
+        <span>
+            Chiste, aún no somos una tetera pero lamentablemente detectamos que no estás conectado a internet.
+            ¡No desesperes! Intentaremos conectarnos, pero mientras conocé más de este fantástico mundo que es el animé.
+        </span>
+    </p>
+  `;
   resultados.innerHTML = `
     <div class="historia">
     <h3>La historia<br/>del <span>animé</span></h3>
