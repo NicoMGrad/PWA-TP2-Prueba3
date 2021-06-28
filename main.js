@@ -5,7 +5,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         btnDesplegar = document.getElementById('desplegar'),
         wWidth = window.matchMedia("(max-width:800px)"),
         cuadroBusqueda = document.querySelector('.contenedor_busqueda'),
-        resultados = document.getElementById('resultados'),
+        cuadroResultados = document.getElementById('resultados'),
         btnBuscar = document.getElementById('buscar');
         
 
@@ -16,7 +16,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 bottom: 0,
                 left: 0,
                 behavior: 'smooth'});
-            resultados.scrollTo({
+            cuadroResultados.scrollTo({
                 top: 0,
                 left: 0,
                 behavior: 'smooth'});
