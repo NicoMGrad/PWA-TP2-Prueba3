@@ -5,6 +5,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         btnDesplegar = document.getElementById('desplegar'),
         wWidth = window.matchMedia("(max-width:800px)").matches,
         cuadroBusqueda = document.querySelector('.contenedor_busqueda'),
+        marginTop = cuadroBusqueda.style.marginTop,
         cuadroResultados = document.getElementById('resultados'),
         btnBuscar = document.getElementById('buscar');
 
@@ -21,11 +22,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     
 
     btnDesplegar.addEventListener('click', function(){
-        if (cuadroBusqueda.style.marginTop == '7rem') {
-            cuadroBusqueda.style.marginTop = '-28rem';
+        if (marginTop == '7rem') {
+            marginTop = '-28rem';
             btnDesplegar.style.transform = 'rotate(-270deg)';
         } else if (cuadroBusqueda.style.marginTop == '-28rem'){
-            cuadroBusqueda.style.marginTop = '7rem';
+            marginTop = '7rem';
             btnDesplegar.style.transform = 'rotate(-90deg)';
         }
     });
@@ -49,11 +50,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 top: 0,
                 left: 0,
                 behavior: 'smooth'});
-                if (cuadroBusqueda.style.marginTop == '7rem') {
-                    cuadroBusqueda.style.marginTop = '-28rem';
+                if (marginTop == '7rem') {
+                    marginTop = '-28rem';
                     btnDesplegar.style.transform = 'rotate(-270deg)';
                 } else {
-                    cuadroBusqueda.style.marginTop = '7rem';
+                    marginTop = '7rem';
                     btnDesplegar.style.transform = 'rotate(-90deg)';
                 }
             
@@ -62,7 +63,8 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             top: 0,
             left: 0,
             behavior: 'smooth'});
-            cuadroBusqueda.style.marginTop = '0rem';
+            marginTop = '0rem';
+            btnDesplegar.style.transform = 'rotate(-270deg)';
         }
     });
 
@@ -81,7 +83,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                         top: 0,
                         left: 0,
                         behavior: 'smooth'});
-                    cuadroBusqueda.style.marginTop = '-28rem';
+                        marginTop = '-28rem';
                 },1000);
             } else {
                 window.scrollTo({
@@ -89,21 +91,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     left: 0,
                     behavior: 'smooth'});
             }
-
-        } /*else if (event.keyCode === 13){
-
-            consulta(termino.value);
-            storeInLocalStorage();
-            window.scrollTo({
-                bottom: 0,
-                left: 0,
-                behavior: 'smooth'});
-            cuadroResultados.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'});
-            cuadroBusqueda.style.marginTop = '-28rem';
-        }*/
+        }
     });
     
     
