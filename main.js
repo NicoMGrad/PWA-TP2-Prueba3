@@ -7,7 +7,6 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         cuadroBusqueda = document.querySelector('.contenedor_busqueda'),
         cuadroResultados = document.getElementById('resultados'),
         btnBuscar = document.getElementById('buscar');
-var marginTop = cuadroBusqueda.style.marginTop;
 
 
     function windowSize(viewport, cuadro){
@@ -22,11 +21,11 @@ var marginTop = cuadroBusqueda.style.marginTop;
     
 
     btnDesplegar.addEventListener('click', function(){
-        if (marginTop == '7rem') {
-            marginTop = '-28rem';
+        if (cuadroBusqueda.style.marginTop == '7rem') {
+            cuadroBusqueda.style.marginTop = '-28rem';
             btnDesplegar.style.transform = 'rotate(-270deg)';
         } else if (cuadroBusqueda.style.marginTop == '-28rem'){
-            marginTop = '7rem';
+            cuadroBusqueda.style.marginTop = '7rem';
             btnDesplegar.style.transform = 'rotate(-90deg)';
         }
     });
@@ -50,11 +49,11 @@ var marginTop = cuadroBusqueda.style.marginTop;
                 top: 0,
                 left: 0,
                 behavior: 'smooth'});
-                if (marginTop == '7rem') {
-                    marginTop = '-28rem';
+                if (cuadroBusqueda.style.marginTop == '7rem') {
+                    cuadroBusqueda.style.marginTop = '-28rem';
                     btnDesplegar.style.transform = 'rotate(-270deg)';
                 } else {
-                    marginTop = '7rem';
+                    cuadroBusqueda.style.marginTop = '7rem';
                     btnDesplegar.style.transform = 'rotate(-90deg)';
                 }
             
@@ -63,7 +62,7 @@ var marginTop = cuadroBusqueda.style.marginTop;
             top: 0,
             left: 0,
             behavior: 'smooth'});
-            marginTop = '0rem';
+            cuadroBusqueda.style.marginTop = '0rem';
             btnDesplegar.style.transform = 'rotate(-270deg)';
         }
     });
@@ -83,7 +82,7 @@ var marginTop = cuadroBusqueda.style.marginTop;
                         top: 0,
                         left: 0,
                         behavior: 'smooth'});
-                    marginTop = '-28rem';
+                    cuadroBusqueda.style.marginTop = '-28rem';
                 },1000);
             } else {
                 window.scrollTo({
