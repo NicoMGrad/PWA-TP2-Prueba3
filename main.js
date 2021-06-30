@@ -94,7 +94,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     behavior: 'smooth'});
             }
 
-        } else if (event.keyCode === 13){
+        } /*else if (event.keyCode === 13){
 
             consulta(termino.value);
             storeInLocalStorage();
@@ -107,7 +107,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 left: 0,
                 behavior: 'smooth'});
             cuadroBusqueda.style.marginTop = '-28rem';
-        }
+        }*/
     });
     
     
