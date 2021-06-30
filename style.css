@@ -938,6 +938,7 @@ h6 {
         width: 70%;
     }
     #resultados {
+        margin-top: 1rem;
         width: 100%;
         position: unset;
         right: 0;

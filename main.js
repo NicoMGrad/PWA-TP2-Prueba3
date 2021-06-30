@@ -30,8 +30,19 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     });
 
+    if (localStorage) {
+        if (!window.location.href.includes('historia')) {
+            resultados(retrieveFormLocalStorage());
+        }
+    } else {
+        if (!window.location.href.includes('historia')) {
+            cuadroResultados.innerHTML = '';
+        }
+    }
+
+
     btnBuscar.addEventListener('click', function(){
-        consulta(termino.value);
+        searchNSet();
         if (wWidth) {
             window.scrollTo({
                 bottom: 0,
@@ -60,9 +71,8 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     termino.addEventListener('keypress',function(event){
         event.preventDefault;
+        searchNSet();
         if (event.key === "Enter") {
-
-            consulta(termino.value);
             if (wWidth) {
                 setTimeout(function(){
                     window.scrollTo({
@@ -82,7 +92,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     left: 0,
                     behavior: 'smooth'});
             }
-
+            /*
         } else if (event.keyCode === 13){
             consulta(termino.value);
             window.scrollTo({
@@ -94,25 +104,16 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 left: 0,
                 behavior: 'smooth'});
             cuadroBusqueda.style.marginTop = '-28rem';
-            btnDesplegar.style.transform = 'rotate(-270deg)';
+            btnDesplegar.style.transform = 'rotate(-270deg)';*/
         }
     });
     
-
-
-    if (localStorage) {
-        if (!window.location.href.includes('historia')) {
-            resultados(retrieveFormLocalStorage());
-        }
-    } else {
+    
+    function searchNSet() {
         consulta(termino.value);
         storeInLocalStorage();
     }
 
-    /*
-    function isInLocalStorage () {
-        return localStorage.lastResult;
-    }*/
     function storeInLocalStorage (response) {
         localStorage.lastResult = JSON.stringify(response);
     }
