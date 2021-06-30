@@ -120,6 +120,11 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     function retrieveFormLocalStorage () {
         return JSON.parse(localStorage.lastResult);
     }
+
+    function searchNSet() {
+        consulta(termino.value);
+        storeInLocalStorage();
+    }
     /*
     if (isInLocalStorage()) {
         let lastResult = retrieveFormLocalStorage();
