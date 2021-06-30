@@ -32,7 +32,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     if (localStorage) {
         if (!window.location.href.includes('historia')) {
-            //resultados(retrieveFormLocalStorage());
+            resultados(retrieveFromLocalStorage());
         }
     } else {
         if (!window.location.href.includes('historia')) {
@@ -71,7 +71,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     });
 
     termino.addEventListener('keypress',function(event){
-        //event.preventDefault;
+        event.preventDefault;
         if (event.key === "Enter") {
             consulta(termino.value);
             storeInLocalStorage();
@@ -209,9 +209,9 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     function storeInLocalStorage (response) {
         localStorage.lastResult = JSON.stringify(response);
     }
-/*
-    function retrieveFormLocalStorage () {
+
+    function retrieveFromLocalStorage () {
         return JSON.parse(localStorage.lastResult);
     }
-   */ 
+   
 });
