@@ -71,7 +71,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     });
 
     termino.addEventListener('keypress',function(event){
-        event.preventDefault;
+        //event.preventDefault;
         if (event.key === "Enter") {
             consulta(termino.value);
             storeInLocalStorage();
