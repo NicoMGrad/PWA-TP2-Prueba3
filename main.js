@@ -75,6 +75,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         if (event.key === "Enter") {
             consulta(termino.value);
             storeInLocalStorage();
+            
             if (wWidth) {
                 setTimeout(function(){
                     window.scrollTo({
