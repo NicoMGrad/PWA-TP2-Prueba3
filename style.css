@@ -958,20 +958,5 @@ h6 {
         padding-top: 1rem;
         letter-spacing: -1px;
     }
-
-    .media--16-9 {
-        padding-bottom: 44.25%;
-    }
-    .primary-text {
-        font-size: 1.3rem;
-    }
-    .title, .primary-text {
-        line-height: 1.1;
-    }
-    .supporting-text {
-        margin-top: .6rem;
-        margin-bottom: 2rem;
-    }
-
     
 }

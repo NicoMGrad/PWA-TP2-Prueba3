@@ -36,7 +36,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     } else {
         if (!window.location.href.includes('historia')) {
-            cuadroResultados.innerHTML = '';
+            
         }
     }
 
@@ -71,8 +71,9 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     termino.addEventListener('keypress',function(event){
         event.preventDefault;
-        searchNSet();
         if (event.key === "Enter") {
+            consulta(termino.value);
+            storeInLocalStorage();
             if (wWidth) {
                 setTimeout(function(){
                     window.scrollTo({
@@ -92,9 +93,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     left: 0,
                     behavior: 'smooth'});
             }
-            /*
+
         } else if (event.keyCode === 13){
             consulta(termino.value);
+            storeInLocalStorage();
             window.scrollTo({
                 bottom: 0,
                 left: 0,
@@ -104,23 +106,13 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 left: 0,
                 behavior: 'smooth'});
             cuadroBusqueda.style.marginTop = '-28rem';
-            btnDesplegar.style.transform = 'rotate(-270deg)';*/
+            btnDesplegar.style.transform = 'rotate(-270deg)';
         }
     });
     
+    
 
-
-    function storeInLocalStorage (response) {
-        localStorage.lastResult = JSON.stringify(response);
-    }
-    function retrieveFormLocalStorage () {
-        return JSON.parse(localStorage.lastResult);
-    }
-
-    function searchNSet() {
-        consulta(termino.value);
-        storeInLocalStorage();
-    }
+    
     /*
     if (isInLocalStorage()) {
         let lastResult = retrieveFormLocalStorage();
@@ -186,10 +178,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     }
     
     
-    
+    /*
     function almacenar(response) {
         localStorage.lastResult = JSON.stringify(response);
-    }
+    }*/
     
     function cortarTitle(titulo) {
         let nuevoTitle = '';
@@ -212,6 +204,14 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             }
         }
         return 1;
+    }
+
+    function storeInLocalStorage (response) {
+        localStorage.lastResult = JSON.stringify(response);
+    }
+
+    function retrieveFormLocalStorage () {
+        return JSON.parse(localStorage.lastResult);
     }
     
 });
