@@ -153,7 +153,6 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                         </div>
                     </div>
                 </div>
-                ${efectoCard()}
                 `
             }).join("")
             
@@ -164,6 +163,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             tarjetas.classList.remove("efectoCard");
         });
     }
+    efectoCard();
     
     function cortarTitle(titulo) {
         let nuevoTitle = '';
