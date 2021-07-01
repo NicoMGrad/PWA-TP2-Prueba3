@@ -97,7 +97,7 @@ window.addEventListener('offline', event => {
     cargaVideo();
     navigator.style.display = 'none';
     //location.reload();
-  }
+
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
   } else {
