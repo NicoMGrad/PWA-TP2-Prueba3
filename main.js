@@ -155,8 +155,6 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 </div>
                 `
             }).join("");
-            
-            
     }
     
     function cortarTitle(titulo) {
