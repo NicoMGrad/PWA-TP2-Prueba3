@@ -128,5 +128,5 @@ if (!navigator.onLine) {
   }
 
 } 
-
+cargaVideo();
 
