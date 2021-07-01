@@ -126,8 +126,9 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
         resultados.innerHTML = data.results
             .sort((a,b)=>a.episodes-b.episodes)
-            .map(anime=>{
-                setTimeout(function(){
+            .map(setTimeout(function(){
+                anime=>{
+                
                     return `
                     <div class="card" onclick="window.location.href='${anime.url}'">
                     <div class="optional-header">
@@ -155,9 +156,9 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     </div>
                 </div>
                 `
-                },200);
+                };
                 
-            }).join("")
+            },200)).join("")
             
     }
 
