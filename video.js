@@ -65,6 +65,7 @@
 
         
         const video = document.createElement('video');
+        video.id = 'videoControl';
         video.controls = true;
         const source1 = document.createElement('source');
         source1.src = mp4URL;
@@ -114,5 +115,7 @@
             console.log('Database setup complete');
         }
     }
-    cargaVideo();
+    if(!body.innerHTML.includes('videoControl')){
+        cargaVideo();
+    }
 //});
