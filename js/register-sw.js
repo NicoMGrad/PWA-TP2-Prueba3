@@ -106,9 +106,11 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
-  
-  main.innerHTML = window.location.href.includes('historia')?cuadroHistoria:cuadroBusqueda;
-  main.innerHTML += window.location.href.includes('historia')?resultadosHistoria:resultadosVacio;
+  if (window.location.href.includes('historia')){
+    main.innerHTML = cuadroHistoria + resultadosHistoria;
+  } else {
+    main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
+  }
   cargaVideo();
   divNav.style.display = 'unset';
   //cargaVideo();

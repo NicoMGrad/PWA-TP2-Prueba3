@@ -115,11 +115,6 @@
             console.log('Database setup complete');
         }
     }
-    /*
-    const checkVideo = document.querySelectorAll('#videoControl');
-    if (checkVideo.length > 1) {
-      let padre = checkVideo[0].parentElement;
-      padre.removeChild(checkVideo[1]);
-    }*/
-    //}
+
+        cargaVideo();
 //});
