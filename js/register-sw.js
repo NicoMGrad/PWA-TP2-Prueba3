@@ -1,5 +1,6 @@
 const resultados = document.getElementById('resultados');
 const cuadroBusqueda = document.querySelector('.contenedor_busqueda');
+const main = document.querySelector('main');
 
 // Chequeo si el browser puede usar Service Worker
 if ('serviceWorker' in navigator) {
@@ -55,19 +56,19 @@ window.addEventListener('online', event => {
       </p>
     `;
   } else {
-    cuadroBusqueda.innerHTML =`
-      <h1>Ohayoo<br/>Akihabara!</h1>
+    main.innerHTML =`
+    <div class="contenedor_busqueda" style="margin-top: 0rem;">       
+      <h1>Ohayoo<br/>Akiahabara!</h1>
       <h2>ANIME|MANGA|VIDEOGAMES</h2>
       <p class="base">
           <span>
               ¡Bienvenido a Ohayo Akihabara! Consultá el estado de tu animé favorito, chequeá los OVAS o capítulos especiales y enterate de las últimas películas publicadas. Simplemente insertá el nombre debajo y el buscador te mostrará toda la información de ese animé. Itadaikimasu!
           </span>
       </p>
-      <form>
-
+      <form onSubmit="return false;">
           <div class="wrapper">
               <div class="input-data">
-                <input type="text" id="busqueda" value="" title="Search" required>
+                <input type="search" id="busqueda" value="" title="Search" required>
                 <div class="underline"></div>
                 <label>Busca tu animé, onii-chan</label>
               </div>
@@ -79,7 +80,9 @@ window.addEventListener('online', event => {
               Buscar
           </button>
       </form>
-      <div class="desplegar">»</div>
+    </div>
+    <div id="desplegar"  style="transform: rotate(-90deg);">»</div>
+    <div id="resultados"></div>
     `;
   }
 
