@@ -96,6 +96,8 @@ window.addEventListener('offline', event => {
   //location.reload();
   if(!document.body.innerHTML.includes('videoControl')){
       cargaVideo();
+  } else {
+    location.reload();
   }
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
@@ -106,9 +108,11 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
-  location.reload();
+  
   if(!document.body.innerHTML.includes('videoControl')){
     cargaVideo();
+  } else {
+    location.reload();
   }
   //cargaVideo();
   /*if (window.location.href.includes('historia')) {
@@ -130,6 +134,8 @@ if (!navigator.onLine) {
   //location.reload();
   if(!document.body.innerHTML.includes('videoControl')){
     cargaVideo();
+  } else {
+    location.reload();
   }
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
