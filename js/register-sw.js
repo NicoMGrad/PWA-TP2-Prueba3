@@ -93,7 +93,8 @@ else {
 
 window.addEventListener('offline', event => {
   main.innerHTML = cuadroTetera + resultadosHistoria;
-  //location.reload();
+  location.reload();
+  cargaVideo();
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
   } else {
@@ -120,6 +121,8 @@ window.addEventListener('online', event => {
 
 if (!navigator.onLine) {
   main.innerHTML = cuadroTetera + resultadosHistoria;
+  location.reload();
+  cargaVideo();
   //location.reload();
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
@@ -128,5 +131,5 @@ if (!navigator.onLine) {
   }
 
 } 
-cargaVideo();
+
 
