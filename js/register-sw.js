@@ -3,7 +3,7 @@ const divBusqueda = document.querySelector('.contenedor_busqueda');
 const botonDesplegar = document.getElementById('desplegar');
 const main = document.querySelector('main');
 const cuadroTetera = `
-                      <div class="contenedor_busqueda" style="margin-top: 0rem;">
+                      <div class="contenedor_busqueda">
                         <h1>418<br/>ERROR</h1>
                         <h2>SOY UNA TETERA</h2>
                         <p class="base">
@@ -28,7 +28,7 @@ const cuadroHistoria = `
                       `;
 
 const cuadroBusqueda = `
-                        <div class="contenedor_busqueda" style="margin-top: 0rem;">       
+                        <div class="contenedor_busqueda">       
                           <h1>Ohayoo<br/>Akiahabara!</h1>
                           <h2>ANIME|MANGA|VIDEOGAMES</h2>
                           <p class="base">
@@ -119,8 +119,9 @@ if (!navigator.onLine) {
   cargaVideo();
 } else {
   main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
-    if (window.matchMedia('max-width:800px;')) {
-      divBusqueda.style.marginTop = '7rem';
-    }
   cargaVideo();
+}
+
+if (window.matchMedia('max-width:800px;')) {
+  divBusqueda.style.marginTop = '7rem';
 }
