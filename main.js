@@ -128,7 +128,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             .sort((a,b)=>a.episodes-b.episodes)
             .map(anime=>{
                 return `
-                    <div class="card" onclick="window.location.href='${anime.url}'">
+                    <div class="card efectoCard" onclick="window.location.href='${anime.url}'">
                     <div class="optional-header">
                     <div class="primary-title">
                         <div class="title">${anime.type}</div>
@@ -153,8 +153,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                         </div>
                     </div>
                 </div>
-                `
-            }).join("");
+                `;
+            }).requestAnimationFrame(() => {
+                document.querySelector('.card.efectoCard').classList.remove("efectoCard");
+              }).join("");
     }
     
     function cortarTitle(titulo) {
