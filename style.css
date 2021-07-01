@@ -373,7 +373,7 @@ h6 {
     animation-duration: 1s;
     opacity: 0;
     transform: translateY(20);
-    animation-delay: 2s;
+    /*animation-delay: 2s;*/
     /*transition: all 1000ms;*/
 }
 
