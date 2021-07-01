@@ -113,6 +113,9 @@ window.addEventListener('online', event => {
 if (!navigator.onLine) {
   main.innerHTML = cuadroTetera + resultadosHistoria;
   cargaVideo();
+} else if (window.location.href.includes('historia')) {
+  main.innerHTML = cuadroHistoria + resultadosHistoria;
+  cargaVideo();
 } else {
   main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
   cargaVideo();
