@@ -202,9 +202,9 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     function storeInLocalStorage(response) {
         localStorage.lastResult = JSON.stringify(response);
     }
-
+/*
     function showMeTheData() {
         return JSON.parse(localStorage.lastResult);
     }
-   
+  */ 
 });
