@@ -106,24 +106,8 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
-  /*if (window.location.href.includes('historia')){
-    main.innerHTML = cuadroHistoria + resultadosHistoria;
-  } else {
-    main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
-  }*/
-  //location.reload();
   cargaVideo();
   divNav.style.display = 'unset';
-  //cargaVideo();
-  /*if (window.location.href.includes('historia')) {
-    main.innerHTML = cuadroHistoria + resultadosHistoria;
-  } else {
-    main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
-    if (window.matchMedia('max-width:800px;')) {
-      desplegarDiv.style.marginTop = '7rem';
-    }
-  }*/
-
 });
 
 
@@ -138,7 +122,6 @@ if (!navigator.onLine) {
   } else {
     divBusqueda.style.marginTop = '0rem';
   }
-
 }
 /*
 setTimeout(function(){
