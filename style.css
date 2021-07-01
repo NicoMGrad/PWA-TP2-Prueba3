@@ -139,8 +139,6 @@ h4 {
     color: #e51f38;
     letter-spacing: -0.05rem;
     padding: 1rem 0;
-    /* border-top: 6px dotted; */
-    /* border-bottom: 4px solid #221689; */
     margin-bottom: 3rem;
     text-decoration: overline;
 }
@@ -295,9 +293,6 @@ h6 {
 	-o-transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1);
 	-webkit-transition: 0 .28s cubic-bezier(.4, 0, .2, 1);
 	transition: box-shadow .28s cubic-bezier(.4, 0, .2, 1), 0 .28s cubic-bezier(.4, 0, .2, 1);
-}
-.button--raised:focus, .button--raised:hover {
-
 }
 .button--purple {
 	background-color: #6200EE;
