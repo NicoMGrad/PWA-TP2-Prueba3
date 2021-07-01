@@ -1,5 +1,6 @@
 //const resultados = document.getElementById('resultados');
 const divBusqueda = document.querySelector('.contenedor_busqueda');
+const divNav = document.querySelector('nav');
 const botonDesplegar = document.getElementById('desplegar');
 const main = document.querySelector('main');
 const cuadroTetera = `
@@ -93,8 +94,9 @@ else {
 
 window.addEventListener('offline', event => {
   main.innerHTML = cuadroTetera + resultadosHistoria;
-  //location.reload();
-    location.reload();
+    cargaVideo();
+    navigator.style.display = 'none';
+    //location.reload();
   }
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
@@ -106,11 +108,9 @@ window.addEventListener('offline', event => {
 
 window.addEventListener('online', event => {
   
-  if(!document.body.innerHTML.includes('videoControl')){
-    cargaVideo();
-  } else {
-    location.reload();
-  }
+  main.innerHTML = cuadroTetera + resultadosHistoria;
+  cargaVideo();
+  navigator.style.display = 'unset';
   //cargaVideo();
   /*if (window.location.href.includes('historia')) {
     main.innerHTML = cuadroHistoria + resultadosHistoria;
@@ -128,12 +128,8 @@ window.addEventListener('online', event => {
 
 if (!navigator.onLine) {
   main.innerHTML = cuadroTetera + resultadosHistoria;
-  location.reload();
-  /*if(!document.body.innerHTML.includes('videoControl')){
-    cargaVideo();
-  } else {
-    location.reload();
-  }*/
+  cargaVideo();
+  navigator.style.display = 'none';
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
   } else {
