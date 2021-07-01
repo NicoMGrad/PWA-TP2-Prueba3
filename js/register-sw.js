@@ -93,7 +93,7 @@ else {
 }
 
 window.addEventListener('offline', event => {
-  main.innerHTML = cuadroTetera + resultadosHistoria;
+  //main.innerHTML = cuadroTetera + resultadosHistoria;
   cargaVideo();
   divNav.style.display = 'none';
 
@@ -103,14 +103,14 @@ window.addEventListener('offline', event => {
     divBusqueda.style.marginTop = '0rem';
   }
 
-});
+});/**/
 
 window.addEventListener('online', event => {
-  if(window.location.href.includes('historia')){
+  /*if(window.location.href.includes('historia')){
     main.innerHTML = cuadroHistoria + resultadosHistoria;
   } else {
     main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
-  }
+  }*/
   cargaVideo();
   divNav.style.display = 'unset';
 });
