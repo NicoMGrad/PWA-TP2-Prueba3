@@ -368,10 +368,23 @@ h6 {
 	overflow: hidden;
 	position: relative;
     width: 5rem;
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 1000ms;
+    animation-name: apareci;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    /*transition: all 1000ms;*/
 }
+
+@keyframes apareci {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .card::after {
 	clear: both;
 }
