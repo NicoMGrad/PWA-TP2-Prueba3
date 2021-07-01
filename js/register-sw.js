@@ -127,7 +127,7 @@ if (!navigator.onLine) {
     divBusqueda.style.marginTop = '0rem';
   }
 }
-
+/**/
 
 
 
