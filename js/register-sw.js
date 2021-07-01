@@ -1,5 +1,6 @@
 //const resultados = document.getElementById('resultados');
-//const cuadroBusqueda = document.querySelector('.contenedor_busqueda');
+const divBusqueda = document.querySelector('.contenedor_busqueda');
+const botonDesplegar = document.getElementById('desplegar');
 const main = document.querySelector('main');
 const cuadroTetera = `
                       <div class="contenedor_busqueda" style="margin-top: 0rem;">
@@ -119,7 +120,7 @@ if (!navigator.onLine) {
 } else {
   main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
     if (window.matchMedia('max-width:800px;')) {
-      desplegarDiv.style.marginTop = '7rem';
+      divBusqueda.style.marginTop = '7rem';
     }
   cargaVideo();
 }
