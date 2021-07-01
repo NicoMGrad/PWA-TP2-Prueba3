@@ -23,7 +23,6 @@ window.addEventListener('offline', event => {
             ¡No desesperes! Intentaremos conectarnos, pero mientras conocé más de este fantástico mundo que es el animé.
         </span>
     </p>
-    <div class="desplegar">»</div>
   `;
   resultados.innerHTML = `
     <div class="historia">
@@ -56,33 +55,34 @@ window.addEventListener('online', event => {
       </p>
     `;
   } else {
-  cuadroBusqueda.innerHTML =`
-    <h1>Ohayoo<br/>Akihabara!</h1>
-    <h2>ANIME|MANGA|VIDEOGAMES</h2>
-    <p class="base">
-        <span>
-            ¡Bienvenido a Ohayo Akihabara! Consultá el estado de tu animé favorito, chequeá los OVAS o capítulos especiales y enterate de las últimas películas publicadas. Simplemente insertá el nombre debajo y el buscador te mostrará toda la información de ese animé. Itadaikimasu!
-        </span>
-    </p>
-    <form>
+    cuadroBusqueda.innerHTML =`
+      <h1>Ohayoo<br/>Akihabara!</h1>
+      <h2>ANIME|MANGA|VIDEOGAMES</h2>
+      <p class="base">
+          <span>
+              ¡Bienvenido a Ohayo Akihabara! Consultá el estado de tu animé favorito, chequeá los OVAS o capítulos especiales y enterate de las últimas películas publicadas. Simplemente insertá el nombre debajo y el buscador te mostrará toda la información de ese animé. Itadaikimasu!
+          </span>
+      </p>
+      <form>
 
-        <div class="wrapper">
-            <div class="input-data">
-              <input type="text" id="busqueda" value="" title="Search" required>
-              <div class="underline"></div>
-              <label>Busca tu animé, onii-chan</label>
-            </div>
-        </div>
-        <button type="button" class="btnMiRipple miRipple" id="buscar">
-            <span class="material-icons">
-                search
-            </span>
-            Buscar
-        </button>
-    </form>
-    <div class="desplegar">»</div>
-  `;
+          <div class="wrapper">
+              <div class="input-data">
+                <input type="text" id="busqueda" value="" title="Search" required>
+                <div class="underline"></div>
+                <label>Busca tu animé, onii-chan</label>
+              </div>
+          </div>
+          <button type="button" class="btnMiRipple miRipple" id="buscar">
+              <span class="material-icons">
+                  search
+              </span>
+              Buscar
+          </button>
+      </form>
+      <div class="desplegar">»</div>
+    `;
   }
+
   resultados.innerHTML= ` 
       <div class="historia">
         <h3>La historia<br/>del <span>animé</span></h3>
@@ -92,10 +92,6 @@ window.addEventListener('online', event => {
         </p>
 
         <div id="video">
-          <video controls="">
-            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/ef864065-188e-47e2-853d-0f7c3435131e" type="video/mp4">
-            <source src="blob:https://pwa-tp-2-prueba3.vercel.app/13fcd72e-e64b-4505-976a-23791aba7e41" type="video/webm">
-          </video>
         </div>
 
         <p class="base">El anime tradicionalmente <span>dibujado a mano y al principio los procesos realizados de forma digital eran muy específicos</span> (retoque y montaje). Sin embargo, en la actualidad las tareas más comunes dentro de la producción de una animación, como podría ser el coloreado o los efectos visuales (brillos, sombras, luz ambiental, etc.), se hacen con aplicaciones digitales, que permiten un mayor control sobre el trabajo y ayudan a agilizar la labor de los dibujantes a niveles insospechados en un proceso de animación tradicional.6​ Sus guiones incluyen gran parte de los géneros de ficción y son transmitidos a través de medios audiovisuales (transmisión por televisión, distribución en formatos de vídeo doméstico y películas con audio). <span>La relación del anime con el manga es estrecha</span>, pues históricamente una gran cantidad de series y trabajos de anime se basan en historias de manga populares. Además, también guarda estrecha relación con las novelas visuales.</p>
@@ -104,6 +100,7 @@ window.addEventListener('online', event => {
         </p>
       </div>`;
       cargaVideo();
+
 });
 
 // A veces este evento falla, ojo!
@@ -121,7 +118,6 @@ if (!navigator.onLine) {
             ¡No desesperes! Intentaremos conectarnos, pero mientras conocé más de este fantástico mundo que es el animé.
         </span>
     </p>
-    <div class="desplegar"></div>
   `;
   resultados.innerHTML = `
     <div class="historia">
