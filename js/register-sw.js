@@ -103,7 +103,7 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
-  location.reload();
+  //location.reload();
   /*if (window.location.href.includes('historia')) {
     main.innerHTML = cuadroHistoria + resultadosHistoria;
   } else {
