@@ -107,7 +107,8 @@ window.addEventListener('offline', event => {
 
 window.addEventListener('online', event => {
   
-  main.innerHTML = cuadroTetera + resultadosHistoria;
+  main.innerHTML = window.location.includes('historia')?cuadroHistoria:cuadroBusqueda;
+  main.innerHTML += window.location.includes('historia')?resultadosHistoria:resultadosVacio;
   cargaVideo();
   divNav.style.display = 'unset';
   //cargaVideo();
@@ -136,13 +137,15 @@ if (!navigator.onLine) {
   }
 
 }
+setTimeout(function(){
+  const checkVideo = document.querySelectorAll('#videoControl');
+  if (checkVideo.length > 1) {
+  let padre = checkVideo[0].parentElement;
+  padre.removeChild(checkVideo[1]);
+  }
+},500);
 
-const checkVideo = document.querySelectorAll('#videoControl');
-    if (checkVideo.length > 1) {
-      let padre = checkVideo[0].parentElement;
-      padre.removeChild(checkVideo[1]);
-    }
 
-/**/
+
 
 
