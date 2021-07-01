@@ -862,6 +862,15 @@ h6 {
         align-items: center;
         padding: 2.5rem;
     }
+
+    .supporting-text {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .primary-text {
+        font-size: 1.3rem;
+    }
+
     .logo {
         height: 2rem;
         width: auto;
@@ -958,5 +967,7 @@ h6 {
         padding-top: 1rem;
         letter-spacing: -1px;
     }
-    
+    .media--16-9 {
+        padding-bottom: 41.25%;
+    } 
 }
