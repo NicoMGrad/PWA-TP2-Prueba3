@@ -93,6 +93,11 @@ else {
 
 window.addEventListener('offline', event => {
   main.innerHTML = cuadroTetera + resultadosHistoria;
+  if (window.matchMedia('max-width:800px;')) {
+    divBusqueda.style.marginTop = '7rem';
+  } else {
+    divBusqueda.style.marginTop = '0rem';
+  }
   cargaVideo();
 });
 
@@ -114,11 +119,13 @@ window.addEventListener('online', event => {
 
 if (!navigator.onLine) {
   main.innerHTML = cuadroTetera + resultadosHistoria;
+  if (window.matchMedia('max-width:800px;')) {
+    divBusqueda.style.marginTop = '7rem';
+  } else {
+    divBusqueda.style.marginTop = '0rem';
+  }
   cargaVideo();
-} else {
-  location.reload();
-  cargaVideo();
-}
+} 
 
 
   /*
@@ -130,8 +137,3 @@ if (!navigator.onLine) {
   cargaVideo();
 }*/
 
-if (window.matchMedia('max-width:800px;')) {
-  divBusqueda.style.marginTop = '7rem';
-} else {
-  divBusqueda.style.marginTop = '0rem';
-}

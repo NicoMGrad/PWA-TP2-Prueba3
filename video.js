@@ -1,5 +1,5 @@
 
-window.addEventListener('DOMContentLoaded', function(){
+//window.addEventListener('DOMContentLoaded', function(){
 
     function cargaVideo() {
 
@@ -115,4 +115,4 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     }
     cargaVideo();
-});
+//});
