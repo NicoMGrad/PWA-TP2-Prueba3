@@ -22,10 +22,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
 
     btnDesplegar.addEventListener('click', function(){
         if (cuadroBusqueda.style.marginTop == '7rem') {
-            cuadroBusqueda.style.marginTop = '-28rem';
+            mTop('-28rem');
             btnDesplegar.style.transform = 'rotate(-270deg)';
         } else if (cuadroBusqueda.style.marginTop == '-28rem'){
-            cuadroBusqueda.style.marginTop = '7rem';
+            mTop('7rem');;
             btnDesplegar.style.transform = 'rotate(-90deg)';
         }
     });
@@ -55,10 +55,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 left: 0,
                 behavior: 'smooth'});
                 if (cuadroBusqueda.style.marginTop == '7rem') {
-                    cuadroBusqueda.style.marginTop = '-28rem';
+                    mTop('-28rem');
                     btnDesplegar.style.transform = 'rotate(-270deg)';
                 } else {
-                    cuadroBusqueda.style.marginTop = '7rem';
+                    mTop('7rem');
                     btnDesplegar.style.transform = 'rotate(-90deg)';
                 }
             
@@ -67,7 +67,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
             top: 0,
             left: 0,
             behavior: 'smooth'});
-            cuadroBusqueda.style.marginTop = '0rem';
+            mTop('0rem');
         }
     });
 
@@ -86,7 +86,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                         top: 0,
                         left: 0,
                         behavior: 'smooth'});
-                    cuadroBusqueda.style.marginTop = '-28rem';
+                    mTop('-28rem');
                 },1000);
             } else {
                 window.scrollTo({
@@ -200,16 +200,16 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 return i+1;
             }
         }
-        return 1;
+        return 1
     }
 
     
     function storeInLocalStorage(response) {
         localStorage.lastResult = JSON.stringify(response);
     }
-/*
-    function showMeTheData() {
-        return JSON.parse(localStorage.lastResult);
+    
+    function mTop(margin) {
+        cuadroBusqueda.style.marginTop == margin;
+        return cuadroBusqueda.style.marginTop
     }
-  */ 
 });
