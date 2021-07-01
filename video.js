@@ -115,7 +115,7 @@
             console.log('Database setup complete');
         }
     }
-    if(!body.innerHTML.includes('videoControl')){
+    if(!document.body.innerHTML.includes('videoControl')){
         cargaVideo();
-    }
+    //}
 //});
