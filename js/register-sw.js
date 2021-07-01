@@ -106,6 +106,11 @@ window.addEventListener('offline', event => {
 });
 
 window.addEventListener('online', event => {
+  if(window.location.href.includes('historia')){
+    main.innerHTML = cuadroHistoria + resultadosHistoria;
+  } else {
+    main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
+  }
   cargaVideo();
   divNav.style.display = 'unset';
 });
