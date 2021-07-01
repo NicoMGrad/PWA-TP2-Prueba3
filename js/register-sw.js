@@ -79,7 +79,7 @@ const resultadosVacio = `
                           </div>
                         `;
 
-// Chequeo si el browser puede usar Service Worker
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('../service-worker.js')
       .then(reg => {
@@ -90,7 +90,6 @@ else {
   console.log("Service worker no soportado.");
 }
 
-// Event Listener para Offline/ Online Status
 window.addEventListener('offline', event => {
   main.innerHTML = cuadroTetera + resultadosHistoria;
   cargaVideo();
@@ -101,14 +100,15 @@ window.addEventListener('online', event => {
     main.innerHTML = cuadroHistoria + resultadosHistoria;
   } else {
     main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
+    if (window.matchMedia('max-width:800px;')) {
+      desplegarDiv.style.marginTop = '7rem';
+    }
   }
   cargaVideo();
 });
 
-// A veces este evento falla, ojo!
-// Sirve para saber si el navegador esta offline, cuando entramos offline. 
-// Es decir, no se disparo los eventos de arriba aun, y necesito conocer el estado.
-// 
+
+// Fallback //
 
 if (!navigator.onLine) {
   main.innerHTML = cuadroTetera + resultadosHistoria;
@@ -118,5 +118,8 @@ if (!navigator.onLine) {
   cargaVideo();
 } else {
   main.innerHTML = cuadroBusqueda + desplegarDiv + resultadosVacio;
+    if (window.matchMedia('max-width:800px;')) {
+      desplegarDiv.style.marginTop = '7rem';
+    }
   cargaVideo();
 }
