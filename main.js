@@ -30,7 +30,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     });
 
-    if (localStorage) {
+    if (localStorage.length >= 1) {
         if (!window.location.href.includes('historia')) {
             let jason = localStorage.getItem('lastResult');
             //JSON.parse(jason);
