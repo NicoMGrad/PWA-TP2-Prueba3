@@ -24,6 +24,10 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         if (cuadroBusqueda.style.marginTop == '7rem') {
             cuadroBusqueda.style.marginTop = '-28rem';
             btnDesplegar.style.transform = 'rotate(-270deg)';
+            window.scrollTo({
+                bottom: 0,
+                left: 0,
+                behavior: 'smooth'});
         } else if (cuadroBusqueda.style.marginTop == '-28rem'){
             cuadroBusqueda.style.marginTop = '7rem';
             btnDesplegar.style.transform = 'rotate(-90deg)';
