@@ -96,12 +96,13 @@ window.addEventListener('offline', event => {
   main.innerHTML = cuadroTetera + resultadosHistoria;
   cargaVideo();
   divNav.style.display = 'none';
-
-  const checkVideo = document.querySelectorAll('#videoControl');
-  if (checkVideo.length > 1) {
-    let padre = checkVideo[0].parentElement;
-    padre.removeChild(checkVideo[1]);
-  }
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    const checkVideo = document.querySelectorAll('#videoControl');
+    if (checkVideo.length > 1) {
+      let padre = checkVideo[0].parentElement;
+      padre.removeChild(checkVideo[1]);
+    }
+}
 
 
   if (window.matchMedia('max-width:800px;')) {
@@ -136,10 +137,12 @@ if (!navigator.onLine) {
   main.innerHTML = cuadroTetera + resultadosHistoria;
   cargaVideo();
   divNav.style.display = 'none';
-  const checkVideo = document.querySelectorAll('#videoControl');
-  if (checkVideo.length > 1) {
-    let padre = checkVideo[0].parentElement;
-    padre.removeChild(checkVideo[1]);
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    const checkVideo = document.querySelectorAll('#videoControl');
+    if (checkVideo.length > 1) {
+      let padre = checkVideo[0].parentElement;
+      padre.removeChild(checkVideo[1]);
+    }
   }
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
