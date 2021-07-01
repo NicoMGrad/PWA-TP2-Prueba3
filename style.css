@@ -849,6 +849,7 @@ h6 {
 
 
 @media screen and (max-width:800px) {
+    body {background: url(../img/fondo_mobile.gif);}
     header {
         position: fixed;
         background: white;
@@ -911,11 +912,6 @@ h6 {
         margin-top: -10px;
         margin-bottom: 2rem;
     }
-    /*
-    #desplegar:target + .contenedor_busqueda {
-        margin-top: -27rem;
-        transition: all ease-in-out 200ms;
-    }*/
 
     h1 {
         font-family: 'M PLUS Rounded 1c','Helvetica',sans-serif;
