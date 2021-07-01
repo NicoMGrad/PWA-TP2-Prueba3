@@ -93,7 +93,7 @@ else {
 }
 
 window.addEventListener('offline', event => {
-  //main.innerHTML = cuadroTetera + resultadosHistoria;
+  main.innerHTML = cuadroTetera + resultadosHistoria;
   cargaVideo();
   divNav.style.display = 'none';
 
