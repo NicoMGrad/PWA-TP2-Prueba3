@@ -9,7 +9,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         btnBuscar = document.getElementById('buscar');
 
 
-    function windowSize(viewport, cuadro){
+    function windowSize(viewport){
         if (viewport) {
             setMTop('7rem');
         } else {
@@ -17,7 +17,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
         }
     };
 
-    windowSize(wWidth,cuadroBusqueda);
+    windowSize(wWidth);
     
 
     btnDesplegar.addEventListener('click', function(){
