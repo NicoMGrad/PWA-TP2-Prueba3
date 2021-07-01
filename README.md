@@ -1,2 +1,9 @@
-# PWA-TP2-Prueba3
- Material Design CDN
+# PWA-TP2-Nicolas Mercado Grad
+
+DWTN2
+Camino elegido: C
+Jikan API
+
+
+
+
