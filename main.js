@@ -155,7 +155,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 </div>
                 ${efectoCard()}
                 `
-            }).join("")
+            })
             
     }
     function efectoCard(){
