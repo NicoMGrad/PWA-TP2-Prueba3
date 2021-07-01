@@ -156,9 +156,7 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                 `
             }).join("");
             
-            requestAnimationFrame(() => {
-                document.querySelector('.card.efectoCard').classList.remove("efectoCard")
-            });
+            
     }
     
     function cortarTitle(titulo) {
