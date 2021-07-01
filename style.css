@@ -9,7 +9,7 @@ body {
     font-family: 'Monstserrat','Helvetica', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url(../img/fondo.jpg);
+    background: url(../img/fondo.gif);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
