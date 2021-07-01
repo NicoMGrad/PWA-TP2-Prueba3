@@ -99,7 +99,7 @@ window.addEventListener('offline', event => {
   } else {
     divBusqueda.style.marginTop = '0rem';
   }
-  cargaVideo();
+
 });
 
 window.addEventListener('online', event => {
@@ -112,7 +112,7 @@ window.addEventListener('online', event => {
       desplegarDiv.style.marginTop = '7rem';
     }
   }*/
-  cargaVideo();
+
 });
 
 
@@ -126,7 +126,7 @@ if (!navigator.onLine) {
   } else {
     divBusqueda.style.marginTop = '0rem';
   }
-  cargaVideo();
+
 } 
 
 
