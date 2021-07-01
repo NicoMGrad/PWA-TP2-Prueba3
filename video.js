@@ -117,5 +117,6 @@
     }
     if(!document.body.innerHTML.includes('videoControl')){
         cargaVideo();
+    }
     //}
 //});
