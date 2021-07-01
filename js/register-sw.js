@@ -94,7 +94,7 @@ else {
 window.addEventListener('offline', event => {
   main.innerHTML = cuadroTetera + resultadosHistoria;
   location.reload();
-  //cargaVideo();
+  cargaVideo();
   if (window.matchMedia('max-width:800px;')) {
     divBusqueda.style.marginTop = '7rem';
   } else {
