@@ -90,8 +90,19 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
                     left: 0,
                     behavior: 'smooth'});
             }
+
         }
     });
+    
+    
+
+    
+    /*
+    if (isInLocalStorage()) {
+        let lastResult = retrieveFormLocalStorage();
+    }*/
+
+
     
     function consulta(anime){
         const fetchPromise = fetch(`${base_URL}?q=${anime}&page=1`);
@@ -183,6 +194,5 @@ const   base_URL = 'https://api.jikan.moe/v3/search/anime',
     function showMeTheData() {
         return JSON.parse(localStorage.lastResult);
     }
-
    
 });
